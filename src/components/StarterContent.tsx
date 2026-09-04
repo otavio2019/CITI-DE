@@ -1,4 +1,4 @@
-export default function Home() {
+export function StarterContent() {
   return (
     <main className="starter-page">
       <h1>Portal CiTI-DE</h1>
