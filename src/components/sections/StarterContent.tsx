@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const heroCategories = [
-	"Serviços",
-	"Programas",
-	"Leis e normas",
-	"Oportunidades",
-	"Notícias",
-	"Contato",
+	"Curso SENAC",
+	"Acelera Patos",
+	"ProInova",
+	"Empregos",
+	"Selo Inovação",
+	"Cartilhar Completa",
 ];
 
 export function StarterContent() {
@@ -15,7 +15,7 @@ export function StarterContent() {
 			<section className="relative isolate min-h-[calc(100svh-76px)] overflow-hidden bg-[linear-gradient(115deg,#032842_0%,#075b96_58%,#16437e_100%)] font-[family-name:var(--font-joan)] text-white md:min-h-[calc(100vh-76px)]">
 				<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_42%,rgba(255,184,0,0.2),transparent_29%)]" />
 				<div className="mx-auto flex min-h-[calc(100svh-76px)] max-w-6xl items-start justify-center px-5 py-20 md:min-h-[calc(100vh-76px)] md:items-center md:py-16">
-					<div className="relative z-10 flex w-full max-w-2xl flex-col items-center text-center">
+					<div className="relative z-10 flex w-full max-w-4xl flex-col items-center text-center">
 						<p className="mb-2 text-xs font-bold tracking-wide text-[#FFB800]">
 							Ciência, Tecnologia e Inovação
 						</p>
@@ -35,12 +35,12 @@ export function StarterContent() {
 						</label>
 
 						{/* Categorias rápidas para orientar o usuário após a busca. */}
-						<div className="mt-8 flex w-full max-w-2xl flex-wrap justify-center gap-3 sm:gap-4">
+						<div className="mt-8 flex w-full flex-wrap justify-center gap-3 sm:gap-4 md:flex-nowrap">
 							{heroCategories.map((category) => (
 								<a
 									key={category}
 									href={`#${category.toLowerCase().replaceAll(" ", "-")}`}
-									className="flex w-fit items-center justify-center rounded-full border border-white/40 px-4 py-2.5 text-center text-sm font-bold text-white transition hover:border-[#FFB800] hover:bg-white/10"
+									className="flex w-fit shrink-0 items-center justify-center rounded-full border border-white/35 px-4 py-2.5 text-center text-sm font-bold text-white transition hover:border-[#FFB800] hover:bg-white/10"
 								>
 									{category}
 								</a>
@@ -68,7 +68,7 @@ export function StarterContent() {
 						/>
 					</div>
 
-					<div className="pointer-events-none absolute bottom-[-8%] right-[-8%] hidden w-[42%] max-w-xl opacity-90 md:block">
+					<div className="pointer-events-none absolute right-[-20%] top-[-8%] w-[58%] max-w-xl opacity-35 md:bottom-[-8%] md:right-[-8%] md:top-auto md:w-[42%] md:opacity-90">
 						<div className="absolute left-1/2 top-1/2 -z-10 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FFB800]/20 blur-3xl" />
 						<Image
 							src="/images/sol 2.png"
