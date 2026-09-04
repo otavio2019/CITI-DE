@@ -29,8 +29,8 @@ export default function Header() {
                 >
                     <ul className="flex items-center gap-8 text-sm">
                         <li>
-                            <a href="#inicio" className="transition hover:text-[#FFB800]">
-                                Início
+                            <a href="#programas" className="transition hover:text-[#FFB800]">
+                                Programas
                             </a>
                         </li>
                         <li>
@@ -39,13 +39,13 @@ export default function Header() {
                             </a>
                         </li>
                         <li>
-                            <a href="#programas" className="transition hover:text-[#FFB800]">
-                                Programas
+                            <a href="#sobre" className="transition hover:text-[#FFB800]">
+                                Sobre
                             </a>
                         </li>
                         <li>
-                            <a href="#informacoes" className="transition hover:text-[#FFB800]">
-                                Informações
+                            <a href="#contato" className="transition hover:text-[#FFB800]">
+                                Contato
                             </a>
                         </li>
                     </ul>
