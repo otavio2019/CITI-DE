@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import {  Joan, Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Joan } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 
 const joan = Joan({
-    variable: "--font-joan",
-    subsets: ["latin"],
-    weight: "400"
+  variable: "--font-joan",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 const geistSans = Geist({
@@ -33,9 +33,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="pt-BR"
-       className={`${joan.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${joan.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col">
         <Header />
         {children}
       </body>
