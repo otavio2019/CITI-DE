@@ -48,6 +48,26 @@ export function StarterContent() {
 						</div>
 					</div>
 
+					{/* Personagens decorativos que equilibram visualmente os dois lados do hero. */}
+					<div className="pointer-events-none absolute bottom-3 left-2 w-20 opacity-90 sm:bottom-5 sm:left-5 sm:w-28 md:bottom-8 md:left-8 md:w-40">
+						<Image
+							src="/images/pato.png"
+							alt=""
+							width={256}
+							height={256}
+							className="h-auto w-full object-contain"
+						/>
+					</div>
+					<div className="pointer-events-none absolute bottom-3 left-1/2 z-10 w-20 -translate-x-1/2 opacity-95 sm:bottom-5 sm:w-28 md:bottom-8 md:left-[28%] md:w-40 md:translate-x-0">
+						<Image
+							src="/images/robou_dando_chau.webp"
+							alt="Robô acenando"
+							width={256}
+							height={256}
+							className="h-auto w-full object-contain"
+						/>
+					</div>
+
 					<div className="pointer-events-none absolute bottom-[-8%] right-[-8%] hidden w-[42%] max-w-xl opacity-90 md:block">
 						<div className="absolute left-1/2 top-1/2 -z-10 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FFB800]/20 blur-3xl" />
 						<Image
