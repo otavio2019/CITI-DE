@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Joan, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+
+const joan = Joan({
+    variable: "--font-joan",
+    subsets: ["latin"],
+    weight: "400"
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,16 +22,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Portal CiTI-DE | Patos - PB",
-  description: "Serviços, programas e informações para impulsionar o desenvolvimento de Patos.",
+  description:
+    "Serviços, programas e informações para impulsionar o desenvolvimento de Patos.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+       className={`${joan.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
