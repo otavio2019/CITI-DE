@@ -1,46 +1,25 @@
 import Image from "next/image";
 
 const heroCategories = [
-	{ label: "Cursos SENAC", href: "#servicos" },
-	{ label: "AceleraPatos", href: "#acelerapatos" },
-	{ label: "ProInova", href: "#proinova" },
+	{ label: "Curso SENAC", href: "#servicos" },
+	{ label: "Acelera Patos", href: "#programas" },
+	{ label: "ProInova", href: "#programas" },
 	{ label: "Empregos", href: "#servicos" },
-	{ label: "Selo Inovação", href: "#reconhecimento" },
-	{ label: "Cartilha completa", href: "#programas" },
+	{ label: "Selo Inovação", href: "#programas" },
+	{ label: "Cartilha Completa", href: "#programas" },
 ];
 
-const citizenServices = [
-	{ title: "Patos + Empregos", description: "Portal de vagas, currículos e qualificação profissional.", href: "https://patos.pb.gov.br/" },
-	{ title: "Cursos CiTI-DE & SENAC", description: "Cursos gratuitos e capacitações para o mercado de trabalho.", href: "https://cursos.citide.patos.pb.gov.br/" },
-	{ title: "ProInova", description: "Apoio ao inventor independente com pedido de patente.", href: "#proinova" },
-	{ title: "Cartilha da Inovação", description: "Guia completo do pacote de leis de ciência, tecnologia e inovação.", href: "#programas" },
+const services = [
+	{ title: "Cursos e capacitações", text: "Qualificação profissional para fortalecer carreiras e negócios em Patos." },
+	{ title: "Patos + Empregos", text: "Oportunidades, vagas e caminhos para quem busca entrar ou crescer no mercado." },
+	{ title: "ProInova", text: "Apoio para inventores independentes e projetos que podem transformar ideias em soluções." },
 ];
 
-const businessServices = [
-	{ title: "AceleraPatos", description: "Benefícios fiscais para empresas de CT&I.", href: "#acelerapatos" },
-	{ title: "Selo Patos Inovação", description: "Reconhecimento às empresas mais inovadoras.", href: "#reconhecimento" },
-	{ title: "PICTI", description: "Incentivos para projetos de inovação aprovados.", href: "#programas" },
-	{ title: "Arranjos Promotores de Inovação", description: "Cooperação entre instituições e empresas.", href: "#sobre" },
-	{ title: "CPSI", description: "Contratação pública para soluções inovadoras.", href: "#programas" },
-	{ title: "Vitrine Tecnológica", description: "Cadastro de pesquisas e tecnologias locais.", href: "#programas" },
+const programs = [
+	{ title: "AceleraPatos", text: "Benefícios e incentivos para empresas de ciência, tecnologia e inovação." },
+	{ title: "Selo Patos Inovação", text: "Reconhecimento para empresas que se destacam por práticas inovadoras." },
+	{ title: "Cartilha da Inovação", text: "Conheça as leis, programas e oportunidades do ecossistema local." },
 ];
-
-const institutionalPillars = [
-	{ title: "Conselho Municipal (CMCTI)", description: "Participação da comunidade nas políticas de inovação, avaliando e fiscalizando as ações." },
-	{ title: "Fundo Municipal (FMCTI)", description: "Fomento à inovação, incentivo às empresas e investimento em projetos de pesquisa." },
-	{ title: "Rede de Promoção (RPI)", description: "Escritórios de inovação em instituições públicas e privadas, coordenados pela CiTI-DE." },
-	{ title: "Arranjos Promotores (API)", description: "Cooperação entre instituições de ciência, empresas e organizações para o desenvolvimento local." },
-];
-
-function ServiceCard({ title, description, href }: { title: string; description: string; href: string }) {
-	return (
-		<a href={href} className="group rounded-2xl border border-[#d9e4ec] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-[#FFB800] hover:shadow-md">
-			<div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#e9f4fb] text-xl text-[#0867A8] transition group-hover:bg-[#FFB800]">↗</div>
-			<h3 className="text-xl font-bold text-[#032842]">{title}</h3>
-			<p className="mt-2 text-sm leading-6 text-[#53636d]">{description}</p>
-		</a>
-	);
-}
 
 export function StarterContent() {
 	return (
@@ -115,105 +94,129 @@ export function StarterContent() {
 				</div>
 			</section>
 
+			{/* Serviços: primeira área de conteúdo depois da apresentação inicial. */}
 			<section id="servicos" className="bg-white px-5 py-20">
 				<div className="mx-auto max-w-6xl">
-					<div className="max-w-2xl">
-						<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0867A8]">Parceria CiTI-DE & SENAC</p>
-						<h2 className="mt-3 text-4xl leading-tight text-[#032842] sm:text-5xl">Cursos e capacitações gratuitas</h2>
-						<p className="mt-4 text-lg leading-8 text-[#53636d]">Qualificação profissional para impulsionar sua carreira e fortalecer o ecossistema de tecnologia e negócios de Patos.</p>
-						<a href="https://cursos.citide.patos.pb.gov.br/" className="mt-6 inline-flex rounded-full bg-[#FFB800] px-5 py-3 font-bold text-[#032842] transition hover:bg-[#e5a500]">Ver cursos disponíveis ↗</a>
-					</div>
-
-					<div className="mt-16 grid gap-12 lg:grid-cols-2">
-						<div>
-							<h2 className="text-3xl text-[#032842]">Para cidadãos</h2>
-							<div className="mt-6 grid gap-4 sm:grid-cols-2">
-								{citizenServices.map((service) => <ServiceCard key={service.title} {...service} />)}
-							</div>
-						</div>
-						<div>
-							<h2 className="text-3xl text-[#032842]">Para empresas</h2>
-							<div className="mt-6 grid gap-4 sm:grid-cols-2">
-								{businessServices.map((service) => <ServiceCard key={service.title} {...service} />)}
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="programas" className="bg-[#edf5fa] px-5 py-20">
-				<div className="mx-auto max-w-6xl">
-					<div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-						<div>
-							<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0867A8]">Em destaque</p>
-							<h2 className="mt-3 text-4xl text-[#032842] sm:text-5xl">Programas que estão transformando Patos</h2>
-						</div>
-						<a href="https://citide.patos.pb.gov.br/cartilha" className="font-bold text-[#0867A8] hover:text-[#032842]">Explorar a cartilha completa ↗</a>
-					</div>
+					<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0867A8]">Encontre oportunidades</p>
+					<h2 className="mt-3 max-w-2xl text-4xl leading-tight text-[#032842] sm:text-5xl">Serviços para movimentar ideias e carreiras</h2>
 					<div className="mt-10 grid gap-5 md:grid-cols-3">
-						<a id="proinova" href="https://citide.patos.pb.gov.br/cartilha#proinova" className="rounded-2xl bg-[#032842] p-7 text-white transition hover:-translate-y-1">
-							<p className="text-sm font-bold uppercase tracking-[0.16em] text-[#FFB800]">Guia completo</p>
-							<h3 className="mt-4 text-3xl">Cartilha da Inovação</h3>
-							<p className="mt-3 leading-7 text-white/75">Conheça os programas e as leis de ciência, tecnologia e inovação do município.</p>
-						</a>
-						<a id="acelerapatos" href="https://citide.patos.pb.gov.br/cartilha#acelerapatos" className="rounded-2xl bg-white p-7 shadow-sm transition hover:-translate-y-1">
-							<p className="text-sm font-bold uppercase tracking-[0.16em] text-[#0867A8]">Benefícios fiscais</p>
-							<h3 className="mt-4 text-3xl text-[#032842]">AceleraPatos</h3>
-							<p className="mt-3 leading-7 text-[#53636d]">ISSQN a 2%, IPTU zerado e mais vantagens para empresas de CT&I.</p>
-						</a>
-						<a id="reconhecimento" href="https://citide.patos.pb.gov.br/cartilha#reconhecimento" className="rounded-2xl bg-[#FFB800] p-7 text-[#032842] transition hover:-translate-y-1">
-							<p className="text-sm font-bold uppercase tracking-[0.16em]">Reconhecimento</p>
-							<h3 className="mt-4 text-3xl">Selo Patos Inovação</h3>
-							<p className="mt-3 leading-7 text-[#35464f]">Premiação anual para empresas que se destacam em práticas inovadoras e sustentáveis.</p>
-						</a>
-					</div>
-					<div className="mt-12 grid grid-cols-2 gap-6 border-t border-[#c8dce8] pt-8 text-center sm:grid-cols-4">
-						<div><strong className="text-4xl text-[#032842]">6</strong><p className="mt-1 text-sm font-bold text-[#53636d]">leis municipais</p></div>
-						<div><strong className="text-4xl text-[#032842]">1</strong><p className="mt-1 text-sm font-bold text-[#53636d]">sistema integrado</p></div>
-						<div><strong className="text-4xl text-[#032842]">4</strong><p className="mt-1 text-sm font-bold text-[#53636d]">programas de fomento</p></div>
-						<div><strong className="text-4xl text-[#032842]">2%</strong><p className="mt-1 text-sm font-bold text-[#53636d]">ISSQN no AceleraPatos</p></div>
-					</div>
-				</div>
-			</section>
-
-			<section id="sobre" className="bg-white px-5 py-20">
-				<div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-					<div>
-						<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0867A8]">Sobre a secretaria</p>
-						<h2 className="mt-3 text-4xl leading-tight text-[#032842] sm:text-5xl">Ciência, Tecnologia, Inovação e Desenvolvimento Econômico</h2>
-						<p className="mt-5 leading-7 text-[#53636d]">A CiTI-DE formula e executa políticas públicas que conectam empresas, inventores, instituições de ensino e cidadãos às oportunidades do ecossistema local.</p>
-					</div>
-					<div className="grid gap-4 sm:grid-cols-2">
-						{institutionalPillars.map((pillar) => (
-							<article key={pillar.title} className="border-l-4 border-[#FFB800] bg-[#f5f8fb] p-5">
-								<h3 className="text-xl font-bold text-[#032842]">{pillar.title}</h3>
-								<p className="mt-2 text-sm leading-6 text-[#53636d]">{pillar.description}</p>
+						{services.map((service) => (
+							<article key={service.title} className="border-t-4 border-[#0867A8] bg-[#f5f8fb] p-6 transition hover:-translate-y-1 hover:shadow-md">
+								<h3 className="text-2xl text-[#032842]">{service.title}</h3>
+								<p className="mt-3 leading-7 text-[#53636d]">{service.text}</p>
 							</article>
 						))}
 					</div>
 				</div>
 			</section>
 
-			<section id="contato" className="bg-[#032842] px-5 py-20 text-white">
-				<div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
-					<div>
-						<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#FFB800]">Fale com a secretaria</p>
-						<h2 className="mt-3 text-4xl sm:text-5xl">Leve a inovação da cartilha para o seu projeto</h2>
-						<p className="mt-5 max-w-xl leading-7 text-white/75">A CiTI-DE está disponível para orientar empresas, inventores e instituições de Patos sobre os programas deste guia.</p>
+			{/* Programas: apresenta os principais caminhos de inovação do portal. */}
+			<section id="programas" className="bg-[#edf5fa] px-5 py-20">
+				<div className="mx-auto max-w-6xl">
+					<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0867A8]">Em destaque</p>
+					<div className="mt-3 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+						<h2 className="max-w-2xl text-4xl leading-tight text-[#032842] sm:text-5xl">Programas que ajudam Patos a inovar</h2>
+						<a href="https://citide.patos.pb.gov.br/cartilha" className="font-bold text-[#0867A8] hover:text-[#032842]">Ver cartilha completa ↗</a>
 					</div>
-					<div className="grid gap-6 sm:grid-cols-2">
-						<div><p className="text-xs font-bold uppercase tracking-[0.16em] text-[#FFB800]">E-mail</p><a href="mailto:citi-de@patos.pb.gov.br" className="mt-2 block text-lg hover:text-[#FFB800]">citi-de@patos.pb.gov.br</a></div>
-						<div><p className="text-xs font-bold uppercase tracking-[0.16em] text-[#FFB800]">Atendimento</p><p className="mt-2 text-lg">08:00 às 14:00</p></div>
-						<div className="sm:col-span-2"><p className="text-xs font-bold uppercase tracking-[0.16em] text-[#FFB800]">Endereço</p><a href="https://maps.app.goo.gl/ibpgjG25uxvzyBYL7" className="mt-2 block text-lg hover:text-[#FFB800]">Avenida Vidal de Negreiros, 84 - Centro, Patos - PB ↗</a></div>
-						<div className="sm:col-span-2"><p className="text-xs font-bold uppercase tracking-[0.16em] text-[#FFB800]">Redes sociais</p><div className="mt-2 flex gap-5 text-lg"><a href="https://www.instagram.com/citide_patos/" className="hover:text-[#FFB800]">@citide_patos ↗</a><a href="https://www.instagram.com/pmpatos/" className="hover:text-[#FFB800]">@pmpatos ↗</a></div></div>
+					<div className="mt-10 grid gap-5 md:grid-cols-3">
+						{programs.map((program, index) => (
+							<a key={program.title} href="https://citide.patos.pb.gov.br/cartilha" className={`p-6 transition hover:-translate-y-1 ${index === 1 ? "bg-[#FFB800] text-[#032842]" : "bg-[#032842] text-white"}`}>
+								<h3 className="text-2xl">{program.title}</h3>
+								<p className={`mt-3 leading-7 ${index === 1 ? "text-[#35464f]" : "text-white/75"}`}>{program.text}</p>
+								<span className="mt-6 inline-block font-bold">Saiba mais ↗</span>
+							</a>
+						))}
 					</div>
 				</div>
 			</section>
 
+			{/* Sobre: explica a missão da secretaria sem reproduzir a estrutura do site de referência. */}
+			<section id="sobre" className="bg-white px-5 py-20">
+				<div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:items-center">
+					<div>
+						<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0867A8]">Sobre a CiTI-DE</p>
+						<h2 className="mt-3 text-4xl leading-tight text-[#032842] sm:text-5xl">Ciência, tecnologia e desenvolvimento para Patos</h2>
+					</div>
+					<p className="text-lg leading-8 text-[#53636d]">A secretaria conecta empresas, inventores, instituições de ensino e cidadãos às políticas públicas e oportunidades de inovação do município.</p>
+				</div>
+			</section>
+
+			{/* Contato: deixa os próximos canais de atendimento visíveis e acessíveis. */}
+			<section id="contato" className="bg-[#032842] px-5 py-20 text-white">
+				<div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 md:flex-row md:items-end">
+					<div>
+						<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#FFB800]">Fale com a secretaria</p>
+						<h2 className="mt-3 max-w-2xl text-4xl sm:text-5xl">Leve sua ideia para o ecossistema de inovação</h2>
+					</div>
+					<div className="text-base leading-8 text-white/80">
+						<p>citi-de@patos.pb.gov.br</p>
+						<p>08:00 às 14:00</p>
+						<a href="https://maps.app.goo.gl/ibpgjG25uxvzyBYL7" className="text-[#FFB800] hover:text-white">Avenida Vidal de Negreiros, 84 - Centro ↗</a>
+					</div>
+				</div>
+			</section>
+
+			{/* Destino do botão "Acesso Portal" do cabeçalho. */}
 			<footer id="portal" className="bg-[#021c2e] px-5 py-8 text-center text-sm text-white/65">
 				<p>Prefeitura de Patos · Secretaria de Ciência, Tecnologia, Inovação e Desenvolvimento Econômico</p>
-				<a href="https://patos.pb.gov.br/" className="mt-2 inline-block text-[#FFB800] hover:text-white">Acessar o portal da Prefeitura ↗</a>
 			</footer>
+
+			<section id="inovapatos">
+				<div className="mx-auto max-w-6xl">
+					<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0867A8]">Em destaque</p>
+					<div className="mt-3 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+						<h2 className="max-w-2xl text-4xl leading-tight text-[#032842] sm:text-5xl">Programas que ajudam Patos a inovar</h2>
+						<a href="https://citide.patos.pb.gov.br/cartilha" className="font-bold text-[#0867A8] hover:text-[#032842]">Ver cartilha completa ↗</a>
+					</div>
+					<div className="mt-10 grid gap-5 md:grid-cols-3">
+						{programs.map((program, index) => (
+							<a key={program.title} href="https://citide.patos.pb.gov.br/cartilha" className={`p-6 transition hover:-translate-y-1 ${index === 1 ? "bg-[#FFB800] text-[#032842]" : "bg-[#032842] text-white"}`}>
+								<h3 className="text-2xl">{program.title}</h3>
+								<p className={`mt-3 leading-7 ${index === 1 ? "text-[#35464f]" : "text-white/75"}`}>{program.text}</p>
+								<span className="mt-6 inline-block font-bold">Saiba mais ↗</span>
+							</a>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section id="acelerapatos">
+				<div className="mx-auto max-w-6xl">
+					<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0867A8]">Em destaque</p>
+					<div className="mt-3 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+						<h2 className="max-w-2xl text-4xl leading-tight text-[#032842] sm:text-5xl">Programas que ajudam Patos a inovar</h2>
+						<a href="https://citide.patos.pb.gov.br/cartilha" className="font-bold text-[#0867A8] hover:text-[#032842]">Ver cartilha completa ↗</a>
+					</div>
+					<div className="mt-10 grid gap-5 md:grid-cols-3">
+						{programs.map((program, index) => (
+							<a key={program.title} href="https://citide.patos.pb.gov.br/cartilha" className={`p-6 transition hover:-translate-y-1 ${index === 1 ? "bg-[#FFB800] text-[#032842]" : "bg-[#032842] text-white"}`}>
+								<h3 className="text-2xl">{program.title}</h3>
+								<p className={`mt-3 leading-7 ${index === 1 ? "text-[#35464f]" : "text-white/75"}`}>{program.text}</p>
+								<span className="mt-6 inline-block font-bold">Saiba mais ↗</span>
+							</a>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section id="proinova">
+				<div className="mx-auto max-w-6xl">
+					<p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0867A8]">Em destaque</p>
+					<div className="mt-3 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+						<h2 className="max-w-2xl text-4xl leading-tight text-[#032842] sm:text-5xl">Programas que ajudam Patos a inovar</h2>
+						<a href="https://citide.patos.pb.gov.br/cartilha" className="font-bold text-[#0867A8] hover:text-[#032842]">Ver cartilha completa ↗</a>
+					</div>
+					<div className="mt-10 grid gap-5 md:grid-cols-3">
+						{programs.map((program, index) => (
+							<a key={program.title} href="https://citide.patos.pb.gov.br/cartilha" className={`p-6 transition hover:-translate-y-1 ${index === 1 ? "bg-[#FFB800] text-[#032842]" : "bg-[#032842] text-white"}`}>
+								<h3 className="text-2xl">{program.title}</h3>
+								<p className={`mt-3 leading-7 ${index === 1 ? "text-[#35464f]" : "text-white/75"}`}>{program.text}</p>
+								<span className="mt-6 inline-block font-bold">Saiba mais ↗</span>
+							</a>
+						))}
+					</div>
+				</div>
+			</section>
 		</main>
 	);
 }

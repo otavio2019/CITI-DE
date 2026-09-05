@@ -10,8 +10,18 @@ const navigationLinks = [
     { label: "Contato", href: "#contato" },
 ];
 
+const programLinks = [
+    { label: "InovaPatos", href: "#inovapatos" },
+    { label: "AceleraPatos", href: "#acelerapatos" },
+    { label: "ProInova", href: "#proinova" },
+    { label: "Selo Patos Inovação", href: "#selo-inovacao" },
+    { label: "Patos + Empregos", href: "#empregos" },
+    { label: "PICTI", href: "#picti" },
+];
+
 export default function Header() {
     const [menuAberto, setMenuAberto] = useState(false);
+    const [programasAberto, setProgramasAberto] = useState(false);
 
   return (
         <header className="relative z-20 bg-[linear-gradient(to_right,#0867A8_22%,#032842_69%)] px-5 py-4 font-[family-name:var(--font-joan)] text-white">
@@ -49,9 +59,7 @@ export default function Header() {
 
                 {/* Acesso destacado ao portal, alinhado à direita. */}
                 <a
-                    href="https://citide.patos.pb.gov.br/painel"
-                    target="_blank"
-                    rel="noreferrer"
+                    href="#portal"
                     className="relative z-10 ml-auto shrink-0 rounded-full border border-white/40 px-2.5 py-1.5 text-xs font-medium transition hover:bg-white/10 md:px-4 md:py-2 md:text-sm"
                 >
                     Acesso Portal <span className="text-[#FFB800]">↗</span>
@@ -79,6 +87,37 @@ export default function Header() {
                                         href={link.href}
                                         className="block rounded px-3 py-2 transition hover:bg-white/10"
                                         onClick={() => setMenuAberto(false)}
+                                    >
+                                        {link.label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                )}
+
+                {/* Programas */}
+                <button
+                    type="button"
+                    className="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-1.5 rounded-md border border-white/40 md:hidden"
+                    aria-label={programasAberto ? "Fechar programas" : "Abrir programas"}
+                    aria-expanded={programasAberto}
+                    onClick={() => setProgramasAberto(!programasAberto)}
+                >
+                    <span className="h-0.5 w-5 bg-white" />
+                    <span className="h-0.5 w-5 bg-white" />
+                    <span className="h-0.5 w-5 bg-white" />
+                </button>
+
+                {programasAberto && (
+                    <nav className="absolute right-0 top-full mt-2 w-52 rounded-lg bg-[#032842] p-3 shadow-xl md:hidden" aria-label="Programas">
+                        <ul className="flex flex-col text-base">
+                            {programLinks.map((link) => (
+                                <li key={link.href}>
+                                    <a
+                                        href={link.href}
+                                        className="block rounded px-3 py-2 transition hover:bg-white/10"
+                                        onClick={() => setProgramasAberto(false)}
                                     >
                                         {link.label}
                                     </a>
