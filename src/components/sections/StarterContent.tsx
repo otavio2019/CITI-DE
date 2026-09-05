@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FormEvent, useState } from "react";
 import { heroCategories, programs, services } from "@/lib/site-content";
 import { PortalSections } from "@/components/sections/PortalSections";
+import { FiSearch } from "react-icons/fi";
 
 // Esta função monta a página na ordem em que o visitante navega por ela.
 // O hero permanece aqui porque é a apresentação principal e usa as imagens do projeto.
@@ -45,14 +46,14 @@ export function StarterContent() {
 				<div className="relative mx-auto flex min-h-[calc(100svh-76px)] max-w-7xl items-center px-5 pb-40 pt-16 sm:px-8 md:min-h-[calc(100vh-76px)] md:px-10 md:py-12">
 					<div className="relative z-10 w-full max-w-xl text-left md:w-[52%]">
 						<p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[#FFD45A]">Ciência, Tecnologia e Inovação</p>
-						<h1 className="font-[family-name:var(--font-joan)] text-5xl leading-[0.95] sm:text-7xl md:text-8xl">Portal <span className="text-[#FFB800]">CiTI-DE</span></h1>
+						<h1 className="whitespace-nowrap font-[family-name:var(--font-joan)] text-[clamp(2.5rem,10vw,7rem)] leading-none">
+							Portal <span className="text-[#FFB800]">CiTI-DE</span></h1>
 						<p className="mt-6 max-w-lg text-base leading-7 text-white/90 sm:text-lg">Serviços, programas e informações para impulsionar o desenvolvimento de Patos.</p>
 						<form onSubmit={handleSearch} className="mt-8 max-w-xl">
 							<label htmlFor="site-search" className="sr-only">Buscar no portal CiTI-DE</label>
 							<div className="flex items-center gap-2 rounded-2xl bg-white p-2 shadow-2xl ring-1 ring-white/30">
-								<span className="pl-3 text-2xl leading-none text-[#8b9398]" aria-hidden="true">⌕</span>
+								<FiSearch className="ml-3 shrink-0 text-xl text-[#8b9398]" aria-hidden="true" />
 								<input id="site-search" type="search" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder="Buscar serviços ou programas" className="min-w-0 flex-1 bg-transparent px-2 py-3 text-sm font-medium text-[#172B3A] outline-none placeholder:text-[#8b9398]" />
-								<button type="submit" className="rounded-xl bg-[#FFB800] px-5 py-3 text-sm font-bold text-[#032842] transition hover:bg-[#FFD45A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#032842]">Buscar</button>
 							</div>
 							{searchMessage && <p role="status" className="mt-3 text-sm font-medium text-[#FFD45A]">{searchMessage}</p>}
 						</form>
