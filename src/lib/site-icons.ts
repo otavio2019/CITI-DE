@@ -26,6 +26,6 @@ export const quickAccessIcons = {
 	curso: FiBookOpen,
 	emprego: FiBriefcase,
 	ideia: FiZap,
-	empresa: FiUsers,
+	inovapatos: FiGlobe,
 	programas: FiGlobe,
 };
