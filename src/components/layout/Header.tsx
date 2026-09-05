@@ -63,7 +63,7 @@ export default function Header() {
 					</ul>
 				</nav>
 
-				<a href="#portal" className="relative z-10 ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-[#FFB800]/70 px-2.5 py-1.5 text-xs font-medium transition hover:bg-[#FFB800] hover:text-[#032842] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFB800] md:px-4 md:py-2 md:text-sm">Acesso Portal <FiArrowUpRight aria-hidden="true" /></a>
+				<a href="https://citide.patos.pb.gov.br/" className="relative z-10 ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-[#FFB800]/70 px-2.5 py-1.5 text-xs font-medium transition hover:bg-[#FFB800] hover:text-[#032842] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFB800] md:px-4 md:py-2 md:text-sm">Acesso Portal oficial <FiArrowUpRight aria-hidden="true" /></a>
 
 				{/* Botão mobile: abre uma única navegação com o submenu interno. */}
 				<button type="button" className="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-1.5 rounded-md border border-white/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFB800] md:hidden" aria-label={menuAberto ? "Fechar menu" : "Abrir menu"} aria-expanded={menuAberto} onClick={() => setMenuAberto(!menuAberto)}>
