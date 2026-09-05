@@ -49,7 +49,9 @@ export default function Header() {
 
                 {/* Acesso destacado ao portal, alinhado à direita. */}
                 <a
-                    href="#portal"
+                    href="https://citide.patos.pb.gov.br/painel"
+                    target="_blank"
+                    rel="noreferrer"
                     className="relative z-10 ml-auto shrink-0 rounded-full border border-white/40 px-2.5 py-1.5 text-xs font-medium transition hover:bg-white/10 md:px-4 md:py-2 md:text-sm"
                 >
                     Acesso Portal <span className="text-[#FFB800]">↗</span>
