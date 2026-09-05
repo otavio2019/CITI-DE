@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f8fb;
+  --foreground: #172b3a;
+  --citi-navy: #032842;
+  --citi-blue: #0867a8;
+  --citi-blue-light: #1688c7;
+  --citi-yellow: #ffb800;
+  --citi-yellow-soft: #ffd45a;
+  --citi-surface: #f5f8fb;
+  --citi-text: #172b3a;
 }
 
 @theme inline {
@@ -18,9 +25,15 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-joan), serif;
+  color: var(--citi-text);
+  font-family: var(--font-geist-sans), sans-serif;
   margin: 0;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .starter-page {
