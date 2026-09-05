@@ -1,0 +1,3 @@
+export function ContactSection() {
+	return <section id="contato" className="bg-[#032842] px-5 py-20 text-white"><div className="mx-auto flex max-w-6xl flex-col justify-between gap-8 md:flex-row md:items-end"><div><p className="text-sm font-bold uppercase tracking-[0.18em] text-[#FFB800]">Fale com a secretaria</p><h2 className="mt-3 max-w-2xl text-4xl sm:text-5xl">Leve sua ideia para o ecossistema de inovação</h2></div><div className="text-base leading-8 text-white/80"><p>citi-de@patos.pb.gov.br</p><p>08:00 às 14:00</p><a href="https://maps.app.goo.gl/ibpgjG25uxvzyBYL7" className="text-[#FFB800] hover:text-white">Avenida Vidal de Negreiros, 84 - Centro ↗</a></div></div></section>;
+}

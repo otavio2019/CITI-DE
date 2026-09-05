@@ -1,0 +1,6 @@
+import { services } from "@/lib/site-content";
+import { serviceIcons } from "@/lib/site-icons";
+
+export function ServicesSection() {
+	return <section id="servicos" className="bg-[linear-gradient(135deg,#dcecf5_0%,#e9f3f8_100%)] px-5 py-20"><div className="mx-auto max-w-6xl"><p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0867A8]">Encontre oportunidades</p><h2 className="mt-3 max-w-2xl text-4xl leading-tight text-[#032842] sm:text-5xl">Serviços para movimentar ideias e carreiras</h2><div className="mt-10 grid gap-5 md:grid-cols-3">{services.map((service) => { const Icon = serviceIcons[service.id as keyof typeof serviceIcons]; return <article id={service.id} key={service.id} className="border-t-4 border-[#0867A8] bg-[#d2e6f0] p-6 transition hover:-translate-y-1 hover:bg-[#c5deeb] hover:shadow-md"><div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#0867A8] text-xl text-white shadow-sm"><Icon aria-hidden="true" /></div><h3 className="text-2xl text-[#032842]">{service.title}</h3><p className="mt-3 leading-7 text-[#53636d]">{service.text}</p></article>; })}</div></div></section>;
+}
