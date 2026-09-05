@@ -1,6 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CiTI-DE
 
-## Getting Started
+Portal da Secretaria de Ciência, Tecnologia, Inovação e Desenvolvimento Econômico de Patos, PB. O site reúne serviços, programas, oportunidades e informações institucionais para cidadãos, empresas e instituições.
+
+## Tecnologias
+
+- Next.js 16 com App Router
+- React 19 e TypeScript
+- Tailwind CSS 4
+- Lucide React e React Icons
+
+## Como executar
+
+Pré-requisitos: Node.js e npm instalados.
+
+```bash
+npm install
+npm run dev
+```
+npm run build
+```
 
 First, run the development server:
 
