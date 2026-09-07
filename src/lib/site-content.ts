@@ -43,9 +43,12 @@ export const quickAccessLinks = [
 ];
 
 export const services = [
-	{ id: "cursos", title: "Cursos e capacitações", text: "Qualificação profissional para fortalecer carreiras e negócios em Patos." },
-	{ id: "empregos", title: "Patos + Empregos", text: "Oportunidades, vagas e caminhos para quem busca entrar ou crescer no mercado." },
-	{ id: "proinova-servico", title: "ProInova", text: "Apoio para inventores independentes e projetos que podem transformar ideias em soluções." },
+	{ id: "cursos", title: "Cursos e capacitações", text: "Qualificação profissional para fortalecer carreiras e negócios em Patos.", href: "https://cursos.citide.patos.pb.gov.br/" },
+	{ id: "empregos", title: "Patos + Empregos", text: "Oportunidades, vagas e caminhos para quem busca entrar ou crescer no mercado.", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
+	{ id: "sala-empreendedor", title: "Sala do Empreendedor", text: "Orientação e apoio para abrir, organizar e desenvolver seu negócio.", href: "https://citide.patos.pb.gov.br/sala-do-empreendedor" },
+	{ id: "artesaos", title: "Mapeamento dos artesãos", text: "Acesso a informações e oportunidades para fortalecer o artesanato local.", href: "https://citide.patos.pb.gov.br/mapeamento-artesoes" },
+	{ id: "inscricoes", title: "Inscrições e editais", text: "Consulte chamadas, inscrições e oportunidades abertas pela secretaria.", href: "https://citide.patos.pb.gov.br/edital-feira-maos-que-criam" },
+	{ id: "atendimento", title: "Atendimento CiTI-DE", text: "Entre em contato para encontrar orientação e o caminho certo para sua demanda.", href: "#contato" },
 ];
 
 export const programs = [
@@ -56,6 +59,69 @@ export const programs = [
 	{ id: "empregos-programa", title: "Patos + Empregos", text: "Oportunidades, qualificação e conexão com o mercado de trabalho." },
 	{ id: "picti", title: "PICTI", text: "Incentivo a projetos de pesquisa, tecnologia e inovação aprovados." },
 ];
+
+export const programDetails = {
+	inovapatos: {
+		title: "InovaPatos",
+		summary: "Conexões e iniciativas para aproximar conhecimento, tecnologia e desenvolvimento local.",
+		audience: "Empreendedores, instituições, pesquisadores e pessoas com iniciativas de inovação.",
+		offers: ["Conexões com o ecossistema local", "Apoio a iniciativas inovadoras", "Integração entre conhecimento e desenvolvimento"],
+		participation: "Consulte a cartilha da inovação e acompanhe as oportunidades publicadas pela CiTI-DE.",
+		documents: "Os documentos variam conforme a chamada ou iniciativa. Confira os requisitos da oportunidade vigente.",
+		period: "Conforme chamadas, agendas e oportunidades divulgadas.",
+		faq: [{ question: "Quem pode participar?", answer: "Pessoas, empresas e instituições envolvidas com ciência, tecnologia e inovação." }],
+	},
+	acelerapatos: {
+		title: "AceleraPatos",
+		summary: "Programa de incentivos e benefícios para empresas de ciência, tecnologia e inovação.",
+		audience: "Empresas que desenvolvem atividades ou projetos relacionados à inovação em Patos.",
+		offers: ["Benefícios e incentivos fiscais", "Orientação para empresas inovadoras", "Conexão com políticas públicas de desenvolvimento"],
+		participation: "Verifique os critérios na cartilha e procure a Sala do Empreendedor para iniciar a solicitação.",
+		documents: "Documentação empresarial e comprovações previstas na legislação e no regulamento do programa.",
+		period: "Solicitações conforme regras e prazos do programa.",
+		faq: [{ question: "Onde solicitar apoio?", answer: "A Sala do Empreendedor é o canal inicial para orientação e encaminhamento." }],
+	},
+	proinova: {
+		title: "ProInova",
+		summary: "Apoio para inventores e projetos com potencial de inovação.",
+		audience: "Inventores independentes, pesquisadores, empreendedores e equipes de projeto.",
+		offers: ["Orientação para transformar ideias em soluções", "Apoio a projetos inovadores", "Conexão com parceiros e oportunidades"],
+		participation: "Apresente sua ideia ou projeto pelos canais de atendimento da CiTI-DE e acompanhe as chamadas disponíveis.",
+		documents: "Descrição do projeto, identificação dos responsáveis e documentos solicitados na chamada.",
+		period: "Conforme edital ou oportunidade publicada.",
+		faq: [{ question: "Preciso ter uma empresa?", answer: "Não necessariamente. O programa também contempla inventores e projetos em desenvolvimento." }],
+	},
+	"selo-inovacao": {
+		title: "Selo Patos Inovação",
+		summary: "Reconhecimento para empresas que se destacam por práticas inovadoras.",
+		audience: "Empresas e organizações com iniciativas, produtos ou processos inovadores.",
+		offers: ["Reconhecimento institucional", "Visibilidade para práticas inovadoras", "Integração com o ecossistema de inovação"],
+		participation: "Confira os critérios de reconhecimento e acompanhe as orientações de inscrição.",
+		documents: "Informações da empresa e evidências das práticas ou resultados de inovação apresentados.",
+		period: "Conforme período de inscrições e agenda de reconhecimento.",
+		faq: [{ question: "O selo tem custo?", answer: "Consulte o regulamento vigente para conhecer as condições de participação." }],
+	},
+	"empregos-programa": {
+		title: "Patos + Empregos",
+		summary: "Oportunidades, qualificação e conexão com o mercado de trabalho.",
+		audience: "Pessoas que buscam emprego, qualificação ou novas oportunidades profissionais.",
+		offers: ["Acesso a oportunidades de trabalho", "Informações de qualificação", "Conexão com empresas e mercado"],
+		participation: "Consulte as oportunidades disponíveis e acompanhe as orientações de cada vaga ou ação.",
+		documents: "Os documentos dependem da vaga, curso ou oportunidade escolhida.",
+		period: "Conforme disponibilidade de vagas e inscrições.",
+		faq: [{ question: "Onde encontro as vagas?", answer: "Acompanhe a cartilha e os canais oficiais da CiTI-DE." }],
+	},
+	picti: {
+		title: "PICTI",
+		summary: "Incentivo a projetos de pesquisa, tecnologia e inovação aprovados.",
+		audience: "Pesquisadores, instituições de ensino, empresas e equipes com projetos de CT&I.",
+		offers: ["Incentivo a pesquisa e desenvolvimento", "Apoio a projetos tecnológicos", "Articulação entre instituições e parceiros"],
+		participation: "Acompanhe os editais e chamadas para verificar elegibilidade e apresentar seu projeto.",
+		documents: "Projeto, plano de trabalho, documentos institucionais e demais itens definidos no edital.",
+		period: "Conforme edital ou chamada pública.",
+		faq: [{ question: "Como saber quando há uma chamada?", answer: "Consulte regularmente os canais oficiais e a cartilha da inovação." }],
+	},
+};
 
 // Organiza a entrada do portal pela intenção do visitante, sem exigir conhecimento da secretaria.
 export const audiencePaths = {

@@ -47,10 +47,10 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 					</div>
 				</div>
 
-				<div className="pointer-events-none absolute bottom-1 left-2 z-20 w-16 sm:bottom-3 sm:left-5 sm:w-24 md:bottom-5 md:left-10 md:w-32">
+				<div className="pointer-events-none absolute bottom-1 left-3 z-0 w-12 sm:bottom-3 sm:left-5 sm:w-16 md:bottom-5 md:left-10 md:w-20">
 					<Image src="/images/pato.png" alt="" width={256} height={256} className="h-auto w-full object-contain" />
 				</div>
-				<div className="pointer-events-none absolute bottom-1 left-[38%] z-20 w-16 -translate-x-1/2 sm:bottom-3 sm:w-24 md:bottom-5 md:left-[34%] md:translate-x-0">
+				<div className="pointer-events-none absolute bottom-1 right-3 z-0 w-12 sm:bottom-3 sm:right-5 sm:w-16 md:bottom-5 md:right-10 md:w-20">
 					<Image src="/images/robou_dando_chau.webp" alt="Robô acenando" width={256} height={256} className="h-auto w-full object-contain" />
 				</div>
 			</div>

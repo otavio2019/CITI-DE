@@ -10,7 +10,10 @@ import {
 export const serviceIcons = {
 	cursos: FiBookOpen,
 	empregos: FiBriefcase,
-	"proinova-servico": FiZap,
+	"sala-empreendedor": FiBriefcase,
+	artesaos: FiUsers,
+	inscricoes: FiFileText,
+	atendimento: FiGlobe,
 };
 
 export const programIcons = {
