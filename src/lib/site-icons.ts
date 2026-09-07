@@ -28,4 +28,5 @@ export const quickAccessIcons = {
 	ideia: FiZap,
 	inovapatos: FiGlobe,
 	programas: FiGlobe,
+	selo: FiUsers,
 };

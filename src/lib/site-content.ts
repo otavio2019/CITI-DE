@@ -34,11 +34,12 @@ export const heroCategories = [
 
 // Atalhos de intenção exibidos logo após o hero para acelerar a primeira decisão do visitante.
 export const quickAccessLinks = [
-	{ id: "curso", label: "Quero fazer um curso", href: "https://cursos.citide.patos.pb.gov.br/" },
-	{ id: "emprego", label: "Quero encontrar emprego", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
-	{ id: "ideia", label: "Tenho uma ideia", href: "https://citide.patos.pb.gov.br/cartilha#proinova" },
-	{ id: "inovapatos", label: "Quero conhecer o InovaPatos", href: "https://citide.patos.pb.gov.br/cartilha#inovapatos" },
-	{ id: "programas", label: "Quero conhecer os programas", href: "https://citide.patos.pb.gov.br/cartilha" },
+	{ id: "curso", label: "Cursos CiTI-DE & SENAC", href: "https://cursos.citide.patos.pb.gov.br/" },
+	{ id: "emprego", label: "Patos + Empregos", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
+	{ id: "inovapatos", label: "AceleraPatos", href: "https://citide.patos.pb.gov.br/cartilha#acelerapatos" },
+	{ id: "ideia", label: "ProInova", href: "https://citide.patos.pb.gov.br/cartilha#proinova" },
+	{ id: "programas", label: "Cartilha da Inovação", href: "https://citide.patos.pb.gov.br/cartilha" },
+	{ id: "selo", label: "Selo Patos Inovação", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
 ];
 
 export const services = [
@@ -60,7 +61,7 @@ export const programs = [
 export const audiencePaths = {
 	cidadao: {
 		label: "Sou cidadão",
-		intro: "Encontre cursos, oportunidades e apoio para transformar sua ideia em caminho profissional.",
+		intro: "Encontre cursos, empregos, programas e capacitações para transformar sua ideia em caminho profissional.",
 		items: [
 			{ label: "Cursos e capacitações", href: "https://cursos.citide.patos.pb.gov.br/" },
 			{ label: "Patos + Empregos", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
@@ -70,15 +71,24 @@ export const audiencePaths = {
 		],
 	},
 	empresa: {
-		label: "Sou empresa ou instituição",
-		intro: "Acesse incentivos, reconhecimento e conexões para desenvolver inovação em Patos.",
+		label: "Represento uma empresa",
+		intro: "Conheça incentivos, apoio e programas para desenvolver inovação e negócios em Patos.",
 		items: [
 			{ label: "AceleraPatos", href: "https://citide.patos.pb.gov.br/cartilha#acelerapatos" },
 			{ label: "Selo Patos Inovação", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
-			{ label: "PICTI", href: "https://citide.patos.pb.gov.br/cartilha#picti" },
+			{ label: "Solicitar apoio", href: "https://citide.patos.pb.gov.br/sala-do-empreendedor" },
+			{ label: "Programas de inovação", href: "https://citide.patos.pb.gov.br/cartilha" },
+		],
+	},
+	instituicao: {
+		label: "Sou uma instituição",
+		intro: "Acesse editais, leis, documentos e redes para construir parcerias pelo desenvolvimento local.",
+		items: [
+			{ label: "Editais e oportunidades", href: "https://citide.patos.pb.gov.br/edital-feira-maos-que-criam" },
+			{ label: "Leis e documentos", href: "https://citide.patos.pb.gov.br/cartilha" },
+			{ label: "Redes e conselhos", href: "#sobre" },
 			{ label: "InovaPatos", href: "https://citide.patos.pb.gov.br/cartilha#inovapatos" },
-			{ label: "ProInova", href: "https://citide.patos.pb.gov.br/cartilha#proinova" },
-			{ label: "Patos + Empregos", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
+			{ label: "Parcerias e inovação", href: "https://citide.patos.pb.gov.br/cartilha#picti" },
 		],
 	},
 };

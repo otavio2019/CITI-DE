@@ -23,7 +23,12 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 					<p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[var(--citi-yellow-soft)]">Ciência, Tecnologia e Inovação</p>
 					<h1 className="max-w-full font-[family-name:var(--font-joan)] text-[clamp(2.75rem,11vw,7rem)] leading-none">
 						Portal <span className="text-[var(--citi-yellow)]">CiTI-DE</span></h1>
-					<p className="mt-6 max-w-lg text-base leading-7 text-white/90 sm:text-lg">Serviços, programas e informações para impulsionar o desenvolvimento de Patos.</p>
+					<p className="mt-6 max-w-lg text-2xl leading-tight text-white sm:text-3xl">Encontre oportunidades para crescer em Patos</p>
+					<p className="mt-4 max-w-lg text-base leading-7 text-white/80 sm:text-lg">Acesse cursos, empregos, programas de inovação e incentivos para empresas.</p>
+					<div className="mt-7 flex flex-wrap gap-3">
+						<a href="#acesso-rapido" className="inline-flex items-center justify-center rounded-full bg-[var(--citi-yellow)] px-5 py-3 text-sm font-bold text-[var(--citi-navy)] hover:bg-[var(--citi-yellow-soft)]">Encontrar um serviço</a>
+						<a href="#programas" className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-5 py-3 text-sm font-bold text-white hover:border-[var(--citi-yellow)] hover:bg-white/15">Conhecer os programas</a>
+					</div>
 					<form onSubmit={onSearch} className="mt-7 max-w-xl">
 						<label htmlFor="site-search" className="sr-only">Buscar no portal CiTI-DE</label>
 						<div className="flex items-center gap-2 rounded-full bg-[var(--citi-surface)] p-2 shadow-2xl ring-1 ring-white/30">
