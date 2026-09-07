@@ -34,7 +34,7 @@ export function PortalFooter() {
 			</div>
 			<div className="mx-auto mt-10 flex max-w-6xl flex-col justify-between gap-3 border-t border-white/10 pt-5 text-xs sm:flex-row">
 				<p>© Prefeitura de Patos · Todos os direitos reservados.</p>
-				<div className="flex gap-4"><a href="#acessibilidade" className="hover:text-[var(--citi-yellow)]">Acessibilidade</a><a href="#privacidade" className="hover:text-[var(--citi-yellow)]">Política de privacidade</a></div>
+				<div className="flex flex-wrap gap-x-4 gap-y-2"><a href="#acessibilidade" className="hover:text-[var(--citi-yellow)]">Acessibilidade</a><a href="#privacidade" className="hover:text-[var(--citi-yellow)]">Política de privacidade</a></div>
 			</div>
 			<div className="mx-auto mt-4 flex max-w-6xl flex-col gap-1 text-xs text-white/45 sm:flex-row sm:gap-5">
 				<p id="acessibilidade">Acessibilidade: este portal prioriza contraste, navegação por teclado e textos alternativos.</p>

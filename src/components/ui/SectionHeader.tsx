@@ -6,6 +6,7 @@ type SectionHeaderProps = {
 };
 
 export function SectionHeader({ eyebrow, title, description, className = "" }: SectionHeaderProps) {
+	// Padroniza a hierarquia textual usada no início das seções do portal.
 	return (
 		<div className={`max-w-2xl ${className}`}>
 			<p className="text-sm font-bold uppercase tracking-[0.18em] text-[var(--citi-yellow-soft)]">{eyebrow}</p>

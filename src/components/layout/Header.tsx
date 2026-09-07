@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navigationLinks, programLinks, serviceLinks } from "@/lib/site-content";
 import { FiArrowUpRight, FiChevronDown, FiChevronUp, FiMenu, FiX } from "react-icons/fi";
 
@@ -16,6 +16,16 @@ export default function Header() {
 		setProgramasAberto(false);
 		setServicosAberto(false);
 	}
+
+	// Fecha o menu por teclado para facilitar a navegação acessível.
+	useEffect(() => {
+		function handleEscape(event: KeyboardEvent) {
+			if (event.key === "Escape") fecharMenus();
+		}
+
+		document.addEventListener("keydown", handleEscape);
+		return () => document.removeEventListener("keydown", handleEscape);
+	}, []);
 
 	return (
 		<header className="relative z-20 border-b border-white/15 bg-[linear-gradient(90deg,var(--citi-blue-light)_0%,var(--citi-blue)_45%,var(--citi-navy)_100%)] px-5 py-4 text-white">
@@ -63,7 +73,7 @@ export default function Header() {
 					</ul>
 				</nav>
 
-				<a href="https://citide.patos.pb.gov.br/painel/login" className="relative z-10 ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-[var(--citi-yellow)] px-2.5 py-1.5 text-xs font-medium transition hover:bg-[var(--citi-yellow)] hover:text-[var(--citi-navy)] md:px-4 md:py-2 md:text-sm">Acesso Portal oficial <FiArrowUpRight aria-hidden="true" /></a>
+				<a href="https://citide.patos.pb.gov.br/painel/login" className="relative z-10 ml-auto hidden shrink-0 items-center gap-1 rounded-full border border-[var(--citi-yellow)] px-2.5 py-1.5 text-xs font-medium transition hover:bg-[var(--citi-yellow)] hover:text-[var(--citi-navy)] sm:inline-flex md:px-4 md:py-2 md:text-sm">Acesso Portal oficial <FiArrowUpRight aria-hidden="true" /></a>
 
 				{/* Botão mobile: abre uma única navegação com o submenu interno. */}
 				<button type="button" className="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-1.5 rounded-md border border-white/40 md:hidden" aria-label={menuAberto ? "Fechar menu" : "Abrir menu"} aria-expanded={menuAberto} onClick={() => setMenuAberto(!menuAberto)}>
@@ -71,29 +81,30 @@ export default function Header() {
 				</button>
 
 				{menuAberto && (
-					<nav className="absolute right-0 top-full mt-2 w-56 rounded-lg border border-white/15 bg-[var(--citi-navy)] p-3 shadow-xl md:hidden" aria-label="Menu mobile">
+					<nav className="absolute right-0 top-full mt-2 w-[min(14rem,calc(100vw-2rem))] rounded-lg border border-white/15 bg-[var(--citi-navy)] p-3 shadow-xl md:hidden" aria-label="Menu mobile">
 						<ul className="flex flex-col text-base">
 							<li>
-								<button type="button" onClick={() => setProgramasAberto(!programasAberto)} aria-expanded={programasAberto} className="flex w-full items-center justify-between rounded px-3 py-2 text-left transition hover:bg-white/10">
+								<button type="button" onClick={() => setProgramasAberto(!programasAberto)} aria-expanded={programasAberto} className="flex w-full items-center justify-between rounded px-3 py-3 text-left transition hover:bg-white/10">
 									<span>Programas</span>{programasAberto ? <FiChevronUp aria-hidden="true" /> : <FiChevronDown aria-hidden="true" />}
 								</button>
 								{programasAberto && (
 									<ul className="mt-1 border-l border-white/20 pl-3 text-sm text-white/80">
-										{programLinks.map((program) => <li key={program.href}><a href={program.href} onClick={fecharMenus} className="block rounded px-3 py-2 hover:bg-white/10 hover:text-white">{program.label}</a></li>)}
+										{programLinks.map((program) => <li key={program.href}><a href={program.href} onClick={fecharMenus} className="block rounded px-3 py-3 hover:bg-white/10 hover:text-white">{program.label}</a></li>)}
 									</ul>
 								)}
 							</li>
 							<li>
-								<button type="button" onClick={() => setServicosAberto(!servicosAberto)} aria-expanded={servicosAberto} className="flex w-full items-center justify-between rounded px-3 py-2 text-left transition hover:bg-white/10">
+								<button type="button" onClick={() => setServicosAberto(!servicosAberto)} aria-expanded={servicosAberto} className="flex w-full items-center justify-between rounded px-3 py-3 text-left transition hover:bg-white/10">
 									<span>Serviços</span>{servicosAberto ? <FiChevronUp aria-hidden="true" /> : <FiChevronDown aria-hidden="true" />}
 								</button>
 								{servicosAberto && (
 									<ul className="mt-1 border-l border-white/20 pl-3 text-sm text-white/80">
-										{serviceLinks.map((service) => <li key={service.href + service.label}><a href={service.href} onClick={fecharMenus} className="block rounded px-3 py-2 hover:bg-white/10 hover:text-white">{service.label}</a></li>)}
+										{serviceLinks.map((service) => <li key={service.href + service.label}><a href={service.href} onClick={fecharMenus} className="block rounded px-3 py-3 hover:bg-white/10 hover:text-white">{service.label}</a></li>)}
 									</ul>
 								)}
 							</li>
-							{navigationLinks.map((link) => <li key={link.href}><a href={link.href} onClick={fecharMenus} className="block rounded px-3 py-2 transition hover:bg-white/10">{link.label}</a></li>)}
+							{navigationLinks.map((link) => <li key={link.href}><a href={link.href} onClick={fecharMenus} className="block rounded px-3 py-3 transition hover:bg-white/10">{link.label}</a></li>)}
+							<li><a href="https://citide.patos.pb.gov.br/painel/login" onClick={fecharMenus} className="mt-2 flex items-center justify-between rounded border-t border-white/15 px-3 py-3 font-medium text-[var(--citi-yellow)]">Acesso Portal oficial <FiArrowUpRight aria-hidden="true" /></a></li>
 						</ul>
 					</nav>
 				)}

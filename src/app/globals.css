@@ -32,6 +32,7 @@ body {
   color: var(--citi-text);
   font-family: var(--font-joan), serif;
   margin: 0;
+  overflow-x: clip;
 }
 
 .portal-content-surface {

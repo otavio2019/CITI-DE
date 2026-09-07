@@ -8,6 +8,7 @@ type ActionButtonProps = {
 };
 
 const variants = {
+	// Amarelo direciona para a ação principal; azul e outline são ações secundárias.
 	primary: "bg-[var(--citi-yellow)] text-[var(--citi-navy)] hover:bg-[var(--citi-yellow-soft)]",
 	secondary: "bg-[var(--citi-blue)] text-white hover:bg-[var(--citi-blue-light)]",
 	outline: "border border-white/35 bg-white/10 text-white hover:border-[var(--citi-yellow)] hover:bg-white/15",

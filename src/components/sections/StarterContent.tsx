@@ -8,9 +8,11 @@ import { PortalSections } from "@/components/sections/PortalSections";
 // Esta função monta a página na ordem em que o visitante navega por ela.
 // O hero permanece aqui porque é a apresentação principal e usa as imagens do projeto.
 export function StarterContent() {
+	// Estado compartilhado entre o campo de busca e a mensagem de resultado.
 	const [searchTerm, setSearchTerm] = useState("");
 	const [searchMessage, setSearchMessage] = useState("");
 
+	// Procura serviços e programas pelo título ou descrição e leva o usuário ao resultado.
 	function handleSearch(event: FormEvent<HTMLFormElement>) {
 		event.preventDefault();
 		const normalizedTerm = searchTerm.trim().toLocaleLowerCase("pt-BR");
@@ -26,7 +28,7 @@ export function StarterContent() {
 
 		if (match) {
 			setSearchMessage(`Encontramos “${match.title}”. Veja esta informação abaixo.`);
-				document.getElementById(match.id)?.scrollIntoView({ behavior: "smooth" });
+			document.getElementById(match.id)?.scrollIntoView({ behavior: "smooth" });
 			return;
 		}
 
