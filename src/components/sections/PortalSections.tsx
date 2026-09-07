@@ -8,7 +8,7 @@ import { StatsSection } from "@/components/sections/StatsSection";
 
 export function PortalSections() {
 	return (
-		<>
+		<div className="portal-content-surface">
 			<QuickAccessSection />
 			<AboutSection />
 			<AudienceSection />
@@ -16,6 +16,6 @@ export function PortalSections() {
 			<ProgramsSection />
 			<StatsSection />
 			<PortalFooter />
-		</>
+		</div>
 	);
 }

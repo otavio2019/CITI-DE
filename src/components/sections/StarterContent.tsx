@@ -34,7 +34,7 @@ export function StarterContent() {
 	}
 
 	return (
-		<main id="inicio" className="overflow-hidden bg-[#f5f8fb]">
+		<main id="inicio" className="overflow-hidden bg-[var(--citi-navy)]">
 			<HeroSection
 				searchTerm={searchTerm}
 				searchMessage={searchMessage}
