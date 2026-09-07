@@ -1,5 +1,7 @@
 import { AboutSection } from "@/components/sections/AboutSection";
 import { AudienceSection } from "@/components/sections/AudienceSection";
+import { ContactSection } from "@/components/sections/ContactSection";
+import { NewsSection } from "@/components/sections/NewsSection";
 import { PortalFooter } from "@/components/sections/PortalFooter";
 import { ProgramsSection } from "@/components/sections/ProgramsSection";
 import { QuickAccessSection } from "@/components/sections/QuickAccessSection";
@@ -12,8 +14,10 @@ export function PortalSections() {
 			<AboutSection />
 			<AudienceSection />
 			<QuickAccessSection />
+			<NewsSection />
 			<ServicesSection />
 			<ProgramsSection />
+			<ContactSection />
 			<StatsSection />
 			<PortalFooter />
 		</div>

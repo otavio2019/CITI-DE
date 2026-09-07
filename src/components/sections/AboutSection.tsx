@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { institutionalBodies } from "@/lib/site-content";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export function AboutSection() {
 	return (
@@ -10,7 +11,7 @@ export function AboutSection() {
 					<h2 className="mt-3 text-4xl leading-tight text-white sm:text-5xl">CiTI-DE — Ciência, Tecnologia, Inovação e Desenvolvimento Econômico</h2>
 					<p className="mt-6 max-w-xl text-lg leading-8 text-white/80">A CiTI-DE é a secretaria da Prefeitura de Patos responsável por formular e executar as políticas públicas de ciência, tecnologia e inovação do município — conectando empresas, inventores, instituições de ensino e cidadãos às oportunidades do ecossistema local.</p>
 					<p className="mt-4 max-w-xl leading-7 text-white/75">Por meio de programas, capacitações e políticas públicas, a secretaria aproxima quem tem uma ideia de quem pode ajudar a colocá-la em prática.</p>
-					<div className="mt-8 grid gap-3 sm:grid-cols-2">{institutionalBodies.map((body) => <article key={body.title} className="border-l-4 border-[var(--citi-yellow)] bg-white/10 px-4 py-3 shadow-sm"><h3 className="text-base font-bold text-white">{body.title}</h3><p className="mt-1 text-sm leading-6 text-white/70">{body.text}</p></article>)}</div>
+					<div className="mt-8 grid gap-3 sm:grid-cols-2">{institutionalBodies.map((body) => <article key={body.title} className="border-l-4 border-[var(--citi-yellow)] bg-white/10 px-4 py-3 shadow-sm"><h3 className="text-base font-bold text-white">{body.title}</h3><p className="mt-1 text-sm leading-6 text-white/70">{body.text}</p><a href="#contato" className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-[var(--citi-yellow)] hover:text-[var(--citi-yellow-soft)]">Falar com a secretaria <FiArrowUpRight aria-hidden="true" /></a></article>)}</div>
 				</div>
 				<div className="relative overflow-hidden rounded-3xl bg-[radial-gradient(circle_at_60%_35%,rgba(255,184,0,0.24),transparent_38%)]"><Image src="/images/sobre-pessoa-inovacao-transparent.png" alt="Pessoa trabalhando em um computador, conectada ao sol CiTI-DE, com apoio de tecnologia e inovação" width={1024} height={768} className="relative h-auto w-full object-contain" /></div>
 			</div>

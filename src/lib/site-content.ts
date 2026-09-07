@@ -42,6 +42,15 @@ export const quickAccessLinks = [
 	{ id: "selo", label: "Selo Patos Inovação", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
 ];
 
+export const opportunities = [
+	{ id: "cursos-abertos", category: "Cursos", date: "Acompanhe as inscrições", title: "Cursos CiTI-DE & SENAC", summary: "Capacitações para fortalecer carreiras, negócios e novas oportunidades em Patos.", status: "aberto", href: "https://cursos.citide.patos.pb.gov.br/" },
+	{ id: "novo-edital", category: "Edital", date: "Consulte o prazo no edital", title: "Feira Mãos que Criam", summary: "Confira os critérios e orientações para participar desta oportunidade.", status: "aberto", href: "https://citide.patos.pb.gov.br/edital-feira-maos-que-criam" },
+	{ id: "acelerapatos-oportunidade", category: "Programa", date: "Agenda do programa", title: "AceleraPatos", summary: "Conheça os incentivos para empresas de ciência, tecnologia e inovação.", status: "em breve", href: "/programas/acelerapatos" },
+	{ id: "proinova-oportunidade", category: "Inovação", date: "Acompanhe as chamadas", title: "ProInova", summary: "Apoio para inventores e projetos com potencial de inovação.", status: "em breve", href: "/programas/proinova" },
+	{ id: "patos-empregos-oportunidade", category: "Empregos", date: "Oportunidades disponíveis", title: "Patos + Empregos", summary: "Encontre caminhos de qualificação e conexão com o mercado de trabalho.", status: "aberto", href: "/programas/empregos-programa" },
+	{ id: "noticia-secretaria", category: "Notícia", date: "Informação institucional", title: "CiTI-DE fortalece o ecossistema local", summary: "Conheça as políticas públicas e redes que apoiam ciência, tecnologia e inovação em Patos.", status: "atualizado", href: "#sobre" },
+];
+
 export const services = [
 	{ id: "cursos", title: "Cursos e capacitações", text: "Qualificação profissional para fortalecer carreiras e negócios em Patos.", href: "https://cursos.citide.patos.pb.gov.br/" },
 	{ id: "empregos", title: "Patos + Empregos", text: "Oportunidades, vagas e caminhos para quem busca entrar ou crescer no mercado.", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
