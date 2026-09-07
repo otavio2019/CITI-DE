@@ -1,4 +1,5 @@
 import { FiArrowUpRight, FiClock, FiMail, FiMapPin } from "react-icons/fi";
+import { ActionButton } from "@/components/ui/ActionButton";
 
 export function ContactSection() {
 	return (
@@ -10,8 +11,8 @@ export function ContactSection() {
 						<h2 className="mt-3 max-w-2xl text-4xl sm:text-5xl">Precisa de orientação?</h2>
 						<p className="mt-5 max-w-xl text-lg leading-8 text-white/75">Nossa equipe pode ajudar você a encontrar o programa ou serviço adequado para sua necessidade.</p>
 						<div className="mt-7 flex flex-wrap gap-3">
-							<a href="mailto:citi-de@patos.pb.gov.br?subject=Solicitação de orientação" className="inline-flex items-center gap-2 rounded-full bg-[var(--citi-yellow)] px-5 py-3 font-bold text-[var(--citi-navy)] hover:bg-[var(--citi-yellow-soft)]"><FiMail aria-hidden="true" />Enviar uma dúvida</a>
-							<a href="https://maps.app.goo.gl/ibpgjG25uxvzyBYL7" className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/10 px-5 py-3 font-bold text-white hover:border-[var(--citi-yellow)] hover:bg-white/15"><FiMapPin aria-hidden="true" />Ver localização</a>
+							<ActionButton href="mailto:citi-de@patos.pb.gov.br?subject=Solicitação de orientação"><FiMail aria-hidden="true" />Enviar uma dúvida</ActionButton>
+							<ActionButton href="https://maps.app.goo.gl/ibpgjG25uxvzyBYL7" variant="outline"><FiMapPin aria-hidden="true" />Ver localização</ActionButton>
 						</div>
 					</div>
 					<div className="grid gap-4 text-sm text-white/75 sm:grid-cols-2 lg:grid-cols-1">
