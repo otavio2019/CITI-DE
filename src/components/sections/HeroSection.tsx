@@ -33,9 +33,9 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 						<label htmlFor="site-search" className="sr-only">Buscar no portal CiTI-DE</label>
 						<div className="flex items-center gap-2 rounded-full bg-[var(--citi-surface)] p-2 shadow-2xl ring-1 ring-white/30">
 							<FiSearch className="ml-3 shrink-0 text-xl text-[var(--citi-text-muted)]" aria-hidden="true" />
-							<input id="site-search" type="search" value={searchTerm} onChange={onSearchTermChange} placeholder="Buscar serviços ou programas" className="min-w-0 flex-1 bg-transparent px-2 py-3 text-sm font-medium text-[var(--citi-text)] outline-none placeholder:text-[var(--citi-text-muted)]" />
+							<input id="site-search" type="search" value={searchTerm} onChange={onSearchTermChange} aria-describedby="site-search-message" aria-invalid={searchMessage.includes("não encontramos") || searchMessage.includes("Digite")} placeholder="Buscar serviços ou programas" className="min-w-0 flex-1 bg-transparent px-2 py-3 text-sm font-medium text-[var(--citi-text)] outline-none placeholder:text-[var(--citi-text-muted)]" />
 						</div>
-						{searchMessage && <p role="status" className="mt-3 text-sm font-medium text-[var(--citi-yellow-soft)]">{searchMessage}</p>}
+						<p id="site-search-message" role="status" aria-live="polite" className={searchMessage ? "mt-3 text-sm font-medium text-[var(--citi-yellow-soft)]" : "sr-only"}>{searchMessage}</p>
 					</form>
 
 					<div className="mt-7 flex w-full flex-wrap gap-2.5 sm:gap-3">

@@ -52,21 +52,31 @@ export const opportunities = [
 ];
 
 export const services = [
-	{ id: "cursos", title: "Cursos e capacitações", text: "Qualificação profissional para fortalecer carreiras e negócios em Patos.", href: "https://cursos.citide.patos.pb.gov.br/" },
-	{ id: "empregos", title: "Patos + Empregos", text: "Oportunidades, vagas e caminhos para quem busca entrar ou crescer no mercado.", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
-	{ id: "sala-empreendedor", title: "Sala do Empreendedor", text: "Orientação e apoio para abrir, organizar e desenvolver seu negócio.", href: "https://citide.patos.pb.gov.br/sala-do-empreendedor" },
-	{ id: "artesaos", title: "Mapeamento dos artesãos", text: "Acesso a informações e oportunidades para fortalecer o artesanato local.", href: "https://citide.patos.pb.gov.br/mapeamento-artesoes" },
-	{ id: "inscricoes", title: "Inscrições e editais", text: "Consulte chamadas, inscrições e oportunidades abertas pela secretaria.", href: "https://citide.patos.pb.gov.br/edital-feira-maos-que-criam" },
-	{ id: "atendimento", title: "Atendimento CiTI-DE", text: "Entre em contato para encontrar orientação e o caminho certo para sua demanda.", href: "#contato" },
+	{ id: "cursos", title: "Cursos e capacitações", text: "Qualificação profissional para fortalecer carreiras e negócios em Patos.", status: "Inscrições abertas", href: "https://cursos.citide.patos.pb.gov.br/" },
+	{ id: "empregos", title: "Patos + Empregos", text: "Oportunidades, vagas e caminhos para quem busca entrar ou crescer no mercado.", status: "Atendimento contínuo", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
+	{ id: "sala-empreendedor", title: "Sala do Empreendedor", text: "Orientação e apoio para abrir, organizar e desenvolver seu negócio.", status: "Atendimento contínuo", href: "https://citide.patos.pb.gov.br/sala-do-empreendedor" },
+	{ id: "artesaos", title: "Mapeamento dos artesãos", text: "Acesso a informações e oportunidades para fortalecer o artesanato local.", status: "Atendimento contínuo", href: "https://citide.patos.pb.gov.br/mapeamento-artesoes" },
+	{ id: "inscricoes", title: "Inscrições e editais", text: "Consulte chamadas, inscrições e oportunidades abertas pela secretaria.", status: "Inscrições abertas", href: "https://citide.patos.pb.gov.br/edital-feira-maos-que-criam" },
+	{ id: "atendimento", title: "Atendimento CiTI-DE", text: "Entre em contato para encontrar orientação e o caminho certo para sua demanda.", status: "Atendimento contínuo", href: "#contato" },
 ];
 
 export const programs = [
-	{ id: "inovapatos", title: "InovaPatos", text: "Conexões e iniciativas para aproximar conhecimento, tecnologia e desenvolvimento local." },
-	{ id: "acelerapatos", title: "AceleraPatos", text: "Benefícios e incentivos para empresas de ciência, tecnologia e inovação." },
-	{ id: "proinova", title: "ProInova", text: "Apoio para inventores e projetos com potencial de inovação." },
-	{ id: "selo-inovacao", title: "Selo Patos Inovação", text: "Reconhecimento para empresas que se destacam por práticas inovadoras." },
-	{ id: "empregos-programa", title: "Patos + Empregos", text: "Oportunidades, qualificação e conexão com o mercado de trabalho." },
-	{ id: "picti", title: "PICTI", text: "Incentivo a projetos de pesquisa, tecnologia e inovação aprovados." },
+	{ id: "inovapatos", title: "InovaPatos", text: "Conexões e iniciativas para aproximar conhecimento, tecnologia e desenvolvimento local.", status: "Atendimento contínuo" },
+	{ id: "acelerapatos", title: "AceleraPatos", text: "Benefícios e incentivos para empresas de ciência, tecnologia e inovação.", status: "Em breve" },
+	{ id: "proinova", title: "ProInova", text: "Apoio para inventores e projetos com potencial de inovação.", status: "Em breve" },
+	{ id: "selo-inovacao", title: "Selo Patos Inovação", text: "Reconhecimento para empresas que se destacam por práticas inovadoras.", status: "Em breve" },
+	{ id: "empregos-programa", title: "Patos + Empregos", text: "Oportunidades, qualificação e conexão com o mercado de trabalho.", status: "Inscrições abertas" },
+	{ id: "picti", title: "PICTI", text: "Incentivo a projetos de pesquisa, tecnologia e inovação aprovados.", status: "Em breve" },
+];
+
+export const faqItems = [
+	{ question: "Quem pode participar dos cursos?", answer: "Consulte os critérios da capacitação escolhida. As oportunidades podem atender cidadãos, empreendedores ou públicos específicos conforme a chamada." },
+	{ question: "Como faço para solicitar apoio?", answer: "Envie uma dúvida pelo canal de atendimento ou procure a Sala do Empreendedor para receber orientação sobre o próximo passo." },
+	{ question: "Como uma empresa acessa os incentivos?", answer: "Conheça o AceleraPatos, confira os critérios e procure a Sala do Empreendedor para iniciar a orientação." },
+	{ question: "Onde encontro os editais?", answer: "A seção Últimas oportunidades reúne chamadas e editais disponíveis. Também é possível acompanhar os canais oficiais da CiTI-DE." },
+	{ question: "Como funciona o ProInova?", answer: "O ProInova apoia inventores e projetos com potencial de inovação. A página do programa reúne orientações, documentos e formas de participação." },
+	{ question: "Como faço contato com a secretaria?", answer: "Envie uma dúvida por e-mail para citi-de@patos.pb.gov.br ou consulte o endereço e o horário na área de atendimento." },
+	{ question: "Quais documentos são necessários?", answer: "A documentação varia conforme o serviço, edital ou programa. Confira os requisitos na página da oportunidade antes de enviar sua solicitação." },
 ];
 
 export const programDetails = {
