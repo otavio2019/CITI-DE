@@ -18,12 +18,12 @@ export default function Header() {
 	}
 
 	return (
-		<header className="relative z-20 border-b border-white/15 bg-[linear-gradient(to_right,#0867A8_22%,#032842_69%)] px-5 py-4 text-white">
-			<div className="relative mx-auto flex max-w-6xl items-center gap-3 md:gap-5">
+		<header className="relative z-20 border-b border-white/15 bg-[linear-gradient(to_right,#0867A8_22%,#032842_69%)] px-5 py-5 text-white md:px-6 md:py-6">
+			<div className="relative mx-auto flex max-w-7xl items-center gap-3 md:gap-6">
 				{/* Marca: volta ao início sem recarregar a página. */}
-				<a href="#inicio" className="flex shrink-0 items-center gap-3" aria-label="CiTI-DE início">
-					<Image src="/icons/logo.png" alt="Logo CiTI-DE" width={40} height={40} className="h-10 w-10 rounded-full object-contain" />
-					<span className="flex items-center gap-1 text-3xl font-bold tracking-tight">
+				<a href="#inicio" className="flex shrink-0 items-center gap-3 md:gap-4" aria-label="CiTI-DE início">
+					<Image src="/icons/logo.png" alt="Logo CiTI-DE" width={52} height={52} className="h-12 w-12 rounded-full object-contain md:h-14 md:w-14" />
+					<span className="flex items-center gap-1 text-[1.8rem] font-bold tracking-tight md:text-[2.2rem]">
 						<span className="font-[family-name:var(--font-joan)] text-white">CiTI</span>
 						<span className="font-[family-name:var(--font-joan)] text-[#FFB800]">-DE</span>
 						<span className="relative -top-1 hidden text-[9px] font-bold leading-none text-white/75 sm:inline">Patos - PB</span>
@@ -32,7 +32,7 @@ export default function Header() {
 
 				{/* Navegação desktop: Serviços e Programas abrem listas de acesso rápido. */}
 				<nav className="absolute left-1/2 hidden -translate-x-1/2 md:block" aria-label="Navegação principal">
-					<ul className="flex items-center gap-8 text-sm">
+					<ul className="flex items-center gap-7 text-sm md:text-[0.95rem]">
 						<li className="relative">
 							<button type="button" onClick={() => setProgramasAberto(!programasAberto)} aria-expanded={programasAberto} className="flex items-center gap-1 transition hover:text-[#FFB800] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFB800]">
 								Programas {programasAberto ? <FiChevronUp aria-hidden="true" /> : <FiChevronDown aria-hidden="true" />}
@@ -63,7 +63,7 @@ export default function Header() {
 					</ul>
 				</nav>
 
-				<a href="#portal" className="relative z-10 ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-[#FFB800]/70 px-2.5 py-1.5 text-xs font-medium transition hover:bg-[#FFB800] hover:text-[#032842] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFB800] md:px-4 md:py-2 md:text-sm">Acesso Portal <FiArrowUpRight aria-hidden="true" /></a>
+				<a href="#portal" className="relative z-10 ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-[#FFB800]/70 px-2.5 py-1.5 text-xs font-medium transition hover:bg-[#FFB800] hover:text-[#032842] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFB800] md:px-5 md:py-2.5 md:text-sm">Acesso Portal <FiArrowUpRight aria-hidden="true" /></a>
 
 				{/* Botão mobile: abre uma única navegação com o submenu interno. */}
 				<button type="button" className="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-1.5 rounded-md border border-white/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFB800] md:hidden" aria-label={menuAberto ? "Fechar menu" : "Abrir menu"} aria-expanded={menuAberto} onClick={() => setMenuAberto(!menuAberto)}>
