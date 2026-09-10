@@ -28,13 +28,8 @@ export default function Header() {
 	}, []);
 
 	return (
-<<<<<<< HEAD
 		<header className="relative z-20 border-b border-white/15 bg-[linear-gradient(to_right,#0867A8_22%,#032842_69%)] px-5 py-5 text-white md:px-6 md:py-6">
 			<div className="relative mx-auto flex max-w-7xl items-center gap-3 md:gap-6">
-=======
-		<header className="relative z-20 border-b border-white/15 bg-[linear-gradient(90deg,var(--citi-blue-light)_0%,var(--citi-blue)_45%,var(--citi-navy)_100%)] px-5 py-4 text-white">
-			<div className="relative mx-auto flex max-w-6xl items-center gap-3 md:gap-5">
->>>>>>> 71a96562fadfc60062e869a7724f4c6e4024c8eb
 				{/* Marca: volta ao início sem recarregar a página. */}
 				<a href="#inicio" className="flex shrink-0 items-center gap-3 md:gap-4" aria-label="CiTI-DE início">
 					<Image src="/icons/logo.png" alt="Logo CiTI-DE" width={52} height={52} className="h-12 w-12 rounded-full object-contain md:h-14 md:w-14" />
@@ -78,11 +73,7 @@ export default function Header() {
 					</ul>
 				</nav>
 
-<<<<<<< HEAD
-				<a href="#portal" className="relative z-10 ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-[#FFB800]/70 px-2.5 py-1.5 text-xs font-medium transition hover:bg-[#FFB800] hover:text-[#032842] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFB800] md:px-5 md:py-2.5 md:text-sm">Acesso Portal <FiArrowUpRight aria-hidden="true" /></a>
-=======
-				<a href="https://citide.patos.pb.gov.br/painel/login" className="relative z-10 ml-auto hidden shrink-0 items-center gap-1 rounded-full border border-[var(--citi-yellow)] px-2.5 py-1.5 text-xs font-medium transition hover:bg-[var(--citi-yellow)] hover:text-[var(--citi-navy)] sm:inline-flex md:px-4 md:py-2 md:text-sm">Acesso Portal oficial <FiArrowUpRight aria-hidden="true" /></a>
->>>>>>> 71a96562fadfc60062e869a7724f4c6e4024c8eb
+				<a href="https://citide.patos.pb.gov.br/painel/login" className="relative z-10 ml-auto hidden shrink-0 items-center gap-1 rounded-full border border-[#FFB800]/70 px-2.5 py-1.5 text-xs font-medium transition hover:bg-[#FFB800] hover:text-[#032842] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FFB800] sm:inline-flex md:px-5 md:py-2.5 md:text-sm">Acesso Portal oficial <FiArrowUpRight aria-hidden="true" /></a>
 
 				{/* Botão mobile: abre uma única navegação com o submenu interno. */}
 				<button type="button" className="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-1.5 rounded-md border border-white/40 md:hidden" aria-label={menuAberto ? "Fechar menu" : "Abrir menu"} aria-expanded={menuAberto} onClick={() => setMenuAberto(!menuAberto)}>
