@@ -6,6 +6,7 @@ import { HighlightsStripSection } from "@/components/sections/HighlightsStripSec
 import { NewsSection } from "@/components/sections/NewsSection";
 import { PortalFooter } from "@/components/sections/PortalFooter";
 import { ProgramsSection } from "@/components/sections/ProgramsSection";
+import { PatosPixelSection } from "@/components/sections/PatosPixelSection";
 import { QuickAccessSection } from "@/components/sections/QuickAccessSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { StatsSection } from "@/components/sections/StatsSection";
@@ -17,6 +18,7 @@ export function PortalSections() {
 			<AboutSection />
 			<AudienceSection />
 			<QuickAccessSection />
+			<PatosPixelSection />
 			<NewsSection />
 			<ServicesSection />
 			<ProgramsSection />

@@ -13,7 +13,13 @@ export function AboutSection() {
 					<p className="mt-4 max-w-xl leading-7 text-white/75">Por meio de programas, capacitações e políticas públicas, a secretaria aproxima quem tem uma ideia de quem pode ajudar a colocá-la em prática.</p>
 					<div className="mt-8 grid gap-3 sm:grid-cols-2">{institutionalBodies.map((body) => <article key={body.title} className="border-l-4 border-[var(--citi-yellow)] bg-white/10 px-4 py-3 shadow-sm"><h3 className="text-base font-bold text-white">{body.title}</h3><p className="mt-1 text-sm leading-6 text-white/70">{body.text}</p><a href="#contato" className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-[var(--citi-yellow)] hover:text-[var(--citi-yellow-soft)]">Falar com a secretaria <FiArrowUpRight aria-hidden="true" /></a></article>)}</div>
 				</div>
-				<div className="relative overflow-hidden rounded-3xl bg-[radial-gradient(circle_at_60%_35%,rgba(255,184,0,0.24),transparent_38%)]"><Image src="/images/sobre-pessoa-inovacao-transparent.png" alt="Pessoa trabalhando em um computador, conectada ao sol CiTI-DE, com apoio de tecnologia e inovação" width={1024} height={768} className="relative h-auto w-full object-contain" /></div>
+				<div className="relative overflow-hidden rounded-3xl border border-white/15 bg-[radial-gradient(circle_at_60%_35%,rgba(255,184,0,0.24),transparent_38%)] shadow-2xl">
+					<Image src="/images/patos-pixel/praca-getulio-vargas.png" alt="Praça Getúlio Vargas em Patos ao pôr do sol, ilustrada em pixel art" width={2176} height={1632} className="h-auto w-full object-cover" />
+					<div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--citi-navy)] via-[var(--citi-navy)]/80 to-transparent px-5 pb-5 pt-16">
+						<p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--citi-yellow-soft)]">Patos, Paraíba</p>
+						<p className="mt-1 text-lg font-bold text-white">Praça Getúlio Vargas</p>
+					</div>
+				</div>
 			</div>
 		</section>
 	);
