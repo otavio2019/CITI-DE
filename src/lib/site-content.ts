@@ -26,11 +26,11 @@ export const programLinks = [
 ];
 
 export const heroCategories = [
-	{ label: "Curso SENAC", href: "https://cursos.citide.patos.pb.gov.br/" },
+	{ label: "Cursos SENAC", href: "https://cursos.citide.patos.pb.gov.br/" },
 	{ label: "AceleraPatos", href: "https://citide.patos.pb.gov.br/cartilha#acelerapatos" },
 	{ label: "ProInova", href: "https://citide.patos.pb.gov.br/cartilha#proinova" },
-	{ label: "Patos + Empregos", href: "https://citide.patos.pb.gov.br/cartilha" },
-	{ label: "Selo Patos Inovação", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
+	{ label: "Empregos", href: "https://citide.patos.pb.gov.br/cartilha" },
+	{ label: "Selo Inovação", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
 	{ label: "Cartilha Completa", href: "https://citide.patos.pb.gov.br/cartilha" },
 ];
 
