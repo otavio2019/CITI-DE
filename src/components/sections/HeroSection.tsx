@@ -59,30 +59,23 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 					<h1 className="max-w-full font-[family-name:var(--font-joan)] text-[clamp(2.5rem,6vw,6.4rem)] leading-[0.9] tracking-[-0.04em] md:text-[clamp(2.8rem,6vw,6.8rem)]">
 						Portal <span className="text-[var(--citi-yellow)]">CiTI-DE</span>
 					</h1>
-					<p className="mt-5 max-w-[38rem] text-lg leading-tight text-white sm:text-2xl lg:text-[2rem]">Encontre serviços, programas e oportunidades para impulsionar o desenvolvimento de Patos.</p>
-					<p className="mt-4 max-w-[38rem] text-sm leading-6 text-white/80 sm:text-base lg:text-lg">Cursos, empregos, apoio a empresas e iniciativas de inovação em um só lugar.</p>
-					{/* Ações prioritárias aparecem antes da busca para orientar o visitante. */}
-					<div className="mt-6 flex flex-wrap gap-2.5 sm:mt-7 sm:gap-3">
-						<a href="#acesso-rapido" className="inline-flex items-center justify-center rounded-full bg-[var(--citi-yellow)] px-4 py-2.5 text-xs font-bold text-[var(--citi-navy)] hover:bg-[var(--citi-yellow-soft)] sm:px-5 sm:py-3 sm:text-sm">Encontrar um serviço</a>
-						<a href="#programas" className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-4 py-2.5 text-xs font-bold text-white hover:border-[var(--citi-yellow)] hover:bg-white/15 sm:px-5 sm:py-3 sm:text-sm">Conhecer os programas</a>
-					</div>
-					{/* Busca global com mensagem acessível para sucesso e erro. */}
-					<form onSubmit={onSearch} className="mt-6 max-w-[720px] sm:mt-7">
+					<p className="mt-5 max-w-[34rem] text-lg leading-tight text-white sm:text-2xl lg:text-[2rem]">Serviços e oportunidades para impulsionar Patos.</p>
+					<p className="mt-4 max-w-[32rem] text-sm leading-6 text-white/80 sm:text-base lg:text-lg">Acesse cursos, programas, emprego e apoio para empresas e cidadãos.</p>
+
+					{/* Busca global focada em uma ação principal: encontrar um serviço. */}
+					<form onSubmit={onSearch} className="mt-6 max-w-[620px] sm:mt-7">
 						<label htmlFor="site-search" className="sr-only">Buscar no portal CiTI-DE</label>
 						<div className="flex items-center gap-2 rounded-full bg-[var(--citi-surface)] p-2 shadow-2xl ring-1 ring-white/30">
 							<FiSearch className="ml-3 shrink-0 text-xl text-[var(--citi-text-muted)]" aria-hidden="true" />
-							<input id="site-search" type="search" value={searchTerm} onChange={onSearchTermChange} aria-describedby="site-search-message" aria-invalid={searchMessage.includes("não encontramos") || searchMessage.includes("Digite")} placeholder="Buscar por serviços, leis ou programas..." className="min-w-0 flex-1 bg-transparent px-2 py-3 text-sm font-medium text-[var(--citi-text)] outline-none placeholder:text-[var(--citi-text-muted)]" />
+							<input id="site-search" type="search" value={searchTerm} onChange={onSearchTermChange} aria-describedby="site-search-message" aria-invalid={searchMessage.includes("não encontramos") || searchMessage.includes("Digite")} placeholder="Buscar no portal..." className="min-w-0 flex-1 bg-transparent px-2 py-3 text-sm font-medium text-[var(--citi-text)] outline-none placeholder:text-[var(--citi-text-muted)]" />
 						</div>
 						<p id="site-search-message" role="status" aria-live="polite" className={searchMessage ? "mt-3 text-sm font-medium text-[var(--citi-yellow-soft)]" : "sr-only"}>{searchMessage}</p>
 					</form>
 
-					{/* Atalhos para os destinos mais procurados. */}
-					<div className="mt-6 flex w-full max-w-[720px] flex-wrap gap-2 sm:gap-2.5 sm:mt-7 sm:gap-3">
-						{heroCategories.map((category) => (
-							<a key={category.label} href={category.href} className="flex w-fit shrink-0 items-center justify-center rounded-full border border-white/35 bg-[var(--citi-navy)]/25 px-3 py-2 text-center text-[0.72rem] font-bold text-white transition hover:border-[var(--citi-yellow)] hover:bg-[var(--citi-yellow)]/15 sm:px-3.5 sm:text-xs">
-								{category.label}
-							</a>
-						))}
+					<div className="mt-6 sm:mt-7">
+						<a href="#acesso-rapido" className="inline-flex items-center justify-center rounded-full bg-[var(--citi-yellow)] px-5 py-3 text-sm font-bold text-[var(--citi-navy)] shadow-lg shadow-[var(--citi-yellow)]/20 transition hover:bg-[var(--citi-yellow-soft)]">
+							Encontrar um serviço
+						</a>
 					</div>
 				</div>
 
