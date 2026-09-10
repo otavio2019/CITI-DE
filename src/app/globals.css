@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 :root {
+  --font-joan: Georgia, "Times New Roman", serif;
+  --font-geist-sans: Inter, system-ui, sans-serif;
+  --font-geist-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --citi-navy: #032842;
   --citi-blue-dark: #064b78;
   --citi-blue: #0867a8;
