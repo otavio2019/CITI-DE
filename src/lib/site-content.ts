@@ -2,8 +2,7 @@
 
 export const navigationLinks = [
 	{ label: "Sobre", href: "#sobre" },
-	{ label: "Serviços", href: "#servicos" },
-	{ label: "Programas", href: "#programas" },
+	
 ];
 
 export const serviceLinks = [
