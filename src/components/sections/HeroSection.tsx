@@ -16,9 +16,9 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 			<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_42%,rgba(255,184,0,0.28),transparent_36%)]" />
 			<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_88%,rgba(56,189,248,0.14),transparent_28%)]" />
 
-			{/* Sol decorativo — só a arte, sem os bonecos de CSS. */}
-			<div className="pointer-events-none absolute right-[-6%] top-[-4%] -z-10 h-[42%] w-[70%] overflow-hidden sm:right-[-2%] sm:top-0 sm:h-[48%] sm:w-[48%] md:right-[-1%] md:top-[2%] md:h-[58%] md:w-[40%] lg:w-[36%]">
-				<div className="absolute right-[18%] top-[16%] h-[42%] w-[48%] rounded-full bg-[var(--citi-yellow)]/25 blur-3xl" aria-hidden="true" />
+			{/* Sol decorativo no hero — apenas a arte do sol. */}
+			<div className="pointer-events-none absolute bottom-0 right-[-4%] -z-10 h-[48%] w-full overflow-hidden md:top-0 md:h-full md:w-[42%]">
+				<div className="absolute right-[18%] top-[16%] h-[38%] w-[52%] rounded-full bg-[var(--citi-yellow)]/22 blur-3xl" aria-hidden="true" />
 				<Image
 					src="/images/sol 2.png"
 					alt=""
@@ -26,12 +26,12 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 					height={1280}
 					priority
 					aria-hidden="true"
-					className="absolute left-[8%] top-[4%] h-[88%] w-[88%] max-w-none object-contain drop-shadow-[0_18px_40px_rgba(255,184,0,0.22)] md:left-[12%] md:top-[8%] md:h-[82%] md:w-[82%]"
+					className="absolute left-[10%] top-[8%] h-[78%] w-[78%] max-w-none object-contain drop-shadow-[0_18px_40px_rgba(255,184,0,0.22)] md:left-[14%] md:top-[12%] md:h-[70%] md:w-[70%]"
 				/>
 			</div>
 
-			<div className="relative mx-auto flex min-h-[calc(100svh-76px)] max-w-[1280px] flex-col items-center px-5 pb-10 pt-12 sm:px-8 sm:pb-12 sm:pt-14 md:min-h-[calc(100vh-76px)] md:flex-row md:items-center md:gap-6 md:px-10 md:py-10 lg:gap-8 lg:px-12">
-				<div className="relative z-10 w-full max-w-[680px] text-left md:w-[52%] md:shrink-0 md:pr-2 lg:w-[48%]">
+			<div className="relative mx-auto flex min-h-[calc(100svh-76px)] max-w-[1280px] items-center px-5 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-14 md:min-h-[calc(100vh-76px)] md:px-10 md:py-10 lg:px-12">
+				<div className="relative z-10 w-full max-w-[680px] text-left md:w-[58%] md:pr-4">
 					{/* Identidade e proposta principal do portal. */}
 					<p className="mb-3 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--citi-yellow-soft)] sm:text-xs">Ciência, Tecnologia e Inovação</p>
 					<h1 className="max-w-full font-[family-name:var(--font-joan)] text-[clamp(2.5rem,6vw,6.4rem)] leading-[0.9] tracking-[-0.04em] md:text-[clamp(2.8rem,5.4vw,6.2rem)]">
@@ -55,20 +55,6 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 							Encontrar um serviço
 						</a>
 					</div>
-				</div>
-
-				{/* Ilustração principal do portal: jovem, pato, robô e sol de inovação. */}
-				<div className="pointer-events-none relative z-0 mt-8 flex w-full max-w-[640px] flex-1 items-end justify-center md:mt-0 md:max-w-none md:justify-end lg:self-stretch">
-					<div className="absolute bottom-[12%] right-[8%] hidden h-[42%] w-[58%] rounded-full bg-[var(--citi-yellow)]/18 blur-3xl md:block" aria-hidden="true" />
-					<Image
-						src="/images/sobre-pessoa-inovacao-transparent.png"
-						alt="Jovem em um computador com um pato de fones, um robô e o sol da inovação"
-						width={2176}
-						height={1632}
-						priority
-						sizes="(max-width: 768px) 92vw, (max-width: 1280px) 48vw, 620px"
-						className="relative h-auto w-full max-w-[560px] object-contain drop-shadow-[0_28px_48px_rgba(2,24,48,0.35)] sm:max-w-[600px] md:max-w-[560px] lg:max-w-[640px] xl:max-w-[680px]"
-					/>
 				</div>
 			</div>
 		</section>
