@@ -3,6 +3,9 @@ import type { ChangeEvent, FormEvent } from "react";
 import { heroCategories } from "@/lib/site-content";
 import { FiSearch } from "react-icons/fi";
 
+/* -------------------------------------------------------------------------- */
+/* Tipos do hero                                                              */
+/* -------------------------------------------------------------------------- */
 type HeroSectionProps = {
 	searchTerm: string;
 	searchMessage: string;
@@ -10,16 +13,33 @@ type HeroSectionProps = {
 	onSearchTermChange: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
+/* -------------------------------------------------------------------------- */
+/* Hero principal do portal                                                   */
+/* - Fundo com identidade visual azul                                         */
+/* - Sol decorativo à direita                                                 */
+/* - Título, busca e atalhos no centro                                        */
+/* -------------------------------------------------------------------------- */
 export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermChange }: HeroSectionProps) {
 	return (
 		<section className="relative isolate min-h-[calc(100svh-76px)] overflow-hidden bg-[linear-gradient(160deg,var(--citi-navy)_0%,var(--citi-blue-dark)_55%,var(--citi-blue)_100%)] text-white md:min-h-[calc(100vh-76px)]">
-			{/* Camadas de fundo com a identidade azul/amarelo do portal. */}
+
+			{/* -------------------------------------------------------------- */}
+			{/* 1) Camadas de fundo (brilhos azul e amarelo)                   */}
+			{/* -------------------------------------------------------------- */}
 			<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_82%_38%,rgba(255,184,0,0.22),transparent_34%)]" />
 			<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_78%,rgba(22,136,199,0.16),transparent_30%)]" />
 
-			{/* Sol decorativo à direita — só a arte, sem bonecos. */}
+			{/* -------------------------------------------------------------- */}
+			{/* 2) Sol decorativo (somente a arte do sol)                      */}
+			{/* -------------------------------------------------------------- */}
 			<div className="pointer-events-none absolute right-[-12%] top-[-8%] -z-10 h-[70%] w-[70%] sm:right-[-8%] sm:top-[-4%] sm:h-[78%] sm:w-[58%] md:right-[-6%] md:top-[-2%] md:h-[90%] md:w-[46%] lg:w-[42%]">
-				<div className="absolute right-[22%] top-[22%] h-[40%] w-[40%] rounded-full bg-[var(--citi-yellow)]/18 blur-3xl" aria-hidden="true" />
+				{/* Brilho suave atrás do sol */}
+				<div
+					className="absolute right-[22%] top-[22%] h-[40%] w-[40%] rounded-full bg-[var(--citi-yellow)]/18 blur-3xl"
+					aria-hidden="true"
+				/>
+
+				{/* Imagem do sol */}
 				<Image
 					src="/images/sol 2.png"
 					alt=""
@@ -31,20 +51,35 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 				/>
 			</div>
 
-			{/* Conteúdo central do hero: título, busca e atalhos. */}
+			{/* -------------------------------------------------------------- */}
+			{/* 3) Conteúdo central do hero                                    */}
+			{/* -------------------------------------------------------------- */}
 			<div className="relative mx-auto flex min-h-[calc(100svh-76px)] max-w-[1100px] flex-col items-center justify-center px-5 pb-16 pt-14 text-center sm:px-8 sm:pb-20 sm:pt-16 md:min-h-[calc(100vh-76px)] md:px-10 md:py-12">
-				<p className="mb-4 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-[var(--citi-yellow)] sm:text-xs">Ciência, Tecnologia e Inovação</p>
 
+				{/* 3.1) Selo / eyebrow */}
+				<p className="mb-4 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-[var(--citi-yellow)] sm:text-xs">
+					Ciência, Tecnologia e Inovação
+				</p>
+
+				{/* 3.2) Título principal */}
 				<h1 className="max-w-[16ch] font-[family-name:var(--font-joan)] text-[clamp(2.8rem,7vw,5.8rem)] leading-[0.92] tracking-[-0.03em] text-white">
 					Portal <span className="text-[var(--citi-yellow)]">CiTI-DE</span>
 				</h1>
 
+				{/* 3.3) Texto de apoio */}
 				<p className="mt-5 max-w-[38rem] text-base leading-7 text-white/85 sm:text-lg sm:leading-8 md:text-xl">
 					O que você precisa? Encontre serviços, programas e informações para impulsionar o desenvolvimento de Patos.
 				</p>
 
+				{/* ---------------------------------------------------------- */}
+				{/* 3.4) Busca do portal                                       */}
+				{/* ---------------------------------------------------------- */}
 				<form onSubmit={onSearch} className="mt-8 w-full max-w-[640px] sm:mt-9">
-					<label htmlFor="site-search" className="sr-only">Buscar no portal CiTI-DE</label>
+					<label htmlFor="site-search" className="sr-only">
+						Buscar no portal CiTI-DE
+					</label>
+
+					{/* Campo visual da busca */}
 					<div className="flex items-center gap-2 rounded-full bg-white p-2 shadow-[0_18px_40px_rgba(2,24,48,0.28)] ring-1 ring-white/40">
 						<FiSearch className="ml-3 shrink-0 text-xl text-[var(--citi-text-muted)]" aria-hidden="true" />
 						<input
@@ -58,12 +93,21 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 							className="min-w-0 flex-1 bg-transparent px-2 py-3 text-left text-sm font-medium text-[var(--citi-text)] outline-none placeholder:text-[var(--citi-text-muted)] sm:text-base"
 						/>
 					</div>
-					<p id="site-search-message" role="status" aria-live="polite" className={searchMessage ? "mt-3 text-sm font-medium text-[var(--citi-yellow-soft)]" : "sr-only"}>
+
+					{/* Mensagem de feedback da busca (sucesso ou erro) */}
+					<p
+						id="site-search-message"
+						role="status"
+						aria-live="polite"
+						className={searchMessage ? "mt-3 text-sm font-medium text-[var(--citi-yellow-soft)]" : "sr-only"}
+					>
 						{searchMessage}
 					</p>
 				</form>
 
-				{/* Atalhos rápidos abaixo da busca. */}
+				{/* ---------------------------------------------------------- */}
+				{/* 3.5) Atalhos rápidos (chips)                               */}
+				{/* ---------------------------------------------------------- */}
 				<div className="mt-6 flex w-full max-w-[760px] flex-wrap items-center justify-center gap-2 sm:mt-7 sm:gap-2.5">
 					{heroCategories.map((category) => (
 						<a
