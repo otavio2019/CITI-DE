@@ -5,14 +5,16 @@ export function PortalFooter() {
 		<footer id="portal" className="bg-[linear-gradient(180deg,var(--citi-navy)_0%,var(--citi-blue-dark)_100%)] px-5 py-12 text-sm text-white/70">
 			<div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
 				<div>
-					<div className="flex items-center gap-3">
-						<Image src="/icons/logo.png" alt="Logo CiTI-DE" width={48} height={48} className="h-12 w-12 object-contain" />
+					<div className="flex items-center gap-4">
+						<div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border border-white/20 bg-white/8 shadow-lg ring-1 ring-white/20">
+							<Image src="/images/logo citi-de.png" alt="Logo CiTI-DE" width={82} height={82} className="h-full w-full object-contain" />
+						</div>
 						<div>
-							<p className="font-[family-name:var(--font-joan)] text-xl text-white">CiTI-DE</p>
+							<p className="font-[family-name:var(--font-joan)] text-2xl text-white">CiTI-DE</p>
 							<p className="text-xs text-white/70">Prefeitura de Patos</p>
 						</div>
 					</div>
-					<p className="mt-5 max-w-sm leading-6">Secretaria de Ciência, Tecnologia, Inovação e Desenvolvimento Econômico.</p>
+					<p className="mt-5 max-w-sm leading-6 text-base text-white/80">Secretaria de Ciência, Tecnologia, Inovação e Desenvolvimento Econômico.</p>
 				</div>
 				<div>
 					<p className="font-bold uppercase tracking-[0.14em] text-[var(--citi-yellow-soft)]">Atendimento</p>
