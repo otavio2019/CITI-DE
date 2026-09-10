@@ -19,6 +19,39 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 				<div className="absolute right-[22%] top-[18%] h-[34%] w-[50%] rounded-full bg-[var(--citi-yellow)]/20 blur-3xl" />
 				<Image src="/images/sol 2.png" alt="Sol com faixas azuis e amarelas, símbolo de energia e inovação" width={1280} height={1280} priority className="absolute left-[12%] top-[12%] h-[66%] w-[66%] max-w-none object-contain md:left-[18%] md:top-[15%] md:h-[60%] md:w-[60%]" />
 			</div>
+			<div className="hero-surface absolute inset-y-0 right-[-4%] hidden w-[42%] lg:block" aria-hidden="true">
+				<div className="hero-sun">
+					<span className="hero-ray hero-ray--1" />
+					<span className="hero-ray hero-ray--2" />
+					<span className="hero-ray hero-ray--3" />
+					<span className="hero-ray hero-ray--4" />
+					<span className="hero-ray hero-ray--5" />
+					<span className="hero-ray hero-ray--6" />
+				</div>
+				<div className="hero-orbit hero-orbit--one" />
+				<div className="hero-orbit hero-orbit--two" />
+				<div className="hero-badge hero-badge--book">
+					<span>📘</span>
+				</div>
+				<div className="hero-badge hero-badge--robot">
+					<span>🤖</span>
+				</div>
+				<div className="hero-stage">
+					<div className="hero-monitor">
+						<div className="hero-screen">
+							<div className="hero-chart hero-chart--1" />
+							<div className="hero-chart hero-chart--2" />
+							<div className="hero-chart hero-chart--3" />
+						</div>
+					</div>
+					<div className="hero-person">
+						<div className="hero-person-head" />
+						<div className="hero-person-body" />
+						<div className="hero-person-arm hero-person-arm--left" />
+						<div className="hero-person-arm hero-person-arm--right" />
+					</div>
+				</div>
+			</div>
 			<div className="relative mx-auto flex min-h-[calc(100svh-76px)] max-w-[1280px] items-center justify-center px-5 pb-44 pt-12 sm:px-8 sm:pb-40 sm:pt-14 md:min-h-[calc(100vh-76px)] md:px-10 md:py-10 lg:px-12">
 				<div className="relative z-10 w-full max-w-[680px] text-left md:w-[62%] md:pr-4">
 					{/* Identidade e proposta principal do portal. */}

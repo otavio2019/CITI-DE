@@ -38,6 +38,199 @@ body {
   overflow-x: clip;
 }
 
+.hero-surface {
+  pointer-events: none;
+  opacity: 0.96;
+}
+
+.hero-sun {
+  position: absolute;
+  right: 12%;
+  top: 10%;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffe7a1 0%, #ffcb2a 20%, #ffb100 55%, #ef9d00 100%);
+  box-shadow: 0 0 30px rgba(255, 184, 0, 0.38);
+}
+
+.hero-ray {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 34px;
+  margin-left: -6px;
+  margin-top: -55px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 215, 100, 0.15), rgba(255, 199, 0, 1), rgba(255, 215, 100, 0.15));
+  transform-origin: center 80px;
+}
+
+.hero-ray--1 { transform: rotate(0deg); }
+.hero-ray--2 { transform: rotate(45deg); }
+.hero-ray--3 { transform: rotate(90deg); }
+.hero-ray--4 { transform: rotate(135deg); }
+.hero-ray--5 { transform: rotate(180deg); }
+.hero-ray--6 { transform: rotate(225deg); }
+
+.hero-orbit {
+  position: absolute;
+  border: 2px dashed rgba(94, 190, 255, 0.7);
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+
+.hero-orbit--one {
+  right: 32%;
+  top: 28%;
+  width: 310px;
+  height: 175px;
+}
+
+.hero-orbit--two {
+  right: 7%;
+  top: 42%;
+  width: 220px;
+  height: 120px;
+}
+
+.hero-badge {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(20, 124, 198, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+  font-size: 1.5rem;
+}
+
+.hero-badge--book {
+  right: 34%;
+  top: 12%;
+}
+
+.hero-badge--robot {
+  right: 2%;
+  top: 34%;
+}
+
+.hero-stage {
+  position: absolute;
+  right: 18%;
+  bottom: 6%;
+  width: 390px;
+  height: 240px;
+}
+
+.hero-monitor {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 360px;
+  height: 160px;
+  transform: translateX(-50%);
+  border-radius: 20px 20px 14px 14px;
+  background: linear-gradient(180deg, rgba(13, 43, 75, 0.9), rgba(3, 40, 66, 0.96));
+  border: 4px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 34px rgba(4, 20, 36, 0.35);
+}
+
+.hero-screen {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 18px;
+  bottom: 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f6c646 0%, #f3b312 45%, #1ca2ef 100%);
+  overflow: hidden;
+}
+
+.hero-chart {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.hero-chart--1 {
+  bottom: 18px;
+  height: 56%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.26), rgba(9, 97, 165, 0.24));
+}
+
+.hero-chart--2 {
+  left: 18px;
+  bottom: 18px;
+  width: 38%;
+  height: 42%;
+  border-radius: 160px 160px 0 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.4), rgba(255,255,255,0.08));
+}
+
+.hero-chart--3 {
+  right: 18px;
+  bottom: 18px;
+  width: 24%;
+  height: 34%;
+  border-radius: 50%;
+  background: rgba(9, 97, 165, 0.8);
+}
+
+.hero-person {
+  position: absolute;
+  right: 12%;
+  bottom: 0;
+  width: 170px;
+  height: 170px;
+}
+
+.hero-person-head {
+  position: absolute;
+  left: 52px;
+  top: 22px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #f5c7a0;
+  box-shadow: inset 0 -8px 0 rgba(0, 0, 0, 0.05);
+}
+
+.hero-person-body {
+  position: absolute;
+  left: 38px;
+  top: 74px;
+  width: 86px;
+  height: 90px;
+  border-radius: 26px 26px 18px 18px;
+  background: linear-gradient(180deg, #f6c936, #efad12);
+}
+
+.hero-person-arm {
+  position: absolute;
+  top: 88px;
+  width: 52px;
+  height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f5c936, #e7a80a);
+}
+
+.hero-person-arm--left {
+  left: 10px;
+  transform: rotate(34deg);
+}
+
+.hero-person-arm--right {
+  right: 8px;
+  transform: rotate(-32deg);
+}
+
 .ticker-shell {
   overflow: hidden;
   position: relative;
