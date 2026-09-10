@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { ChangeEvent, FormEvent } from "react";
-import { heroCategories } from "@/lib/site-content";
 import { FiSearch } from "react-icons/fi";
 
 type HeroSectionProps = {
@@ -14,52 +13,17 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 	return (
 		<section className="relative isolate min-h-[calc(100svh-76px)] overflow-hidden bg-[linear-gradient(115deg,var(--citi-navy)_0%,var(--citi-blue-dark)_58%,var(--citi-blue)_100%)] text-white md:min-h-[calc(100vh-76px)]">
 			{/* Camadas visuais ficam atrás do conteúdo para não bloquear interações. */}
-			<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_76%_48%,rgba(255,184,0,0.34),transparent_34%)]" />
-			<div className="absolute bottom-0 right-[-2%] -z-10 h-[48%] w-full overflow-hidden md:top-0 md:h-full md:w-[34%]">
-				<div className="absolute right-[22%] top-[18%] h-[34%] w-[50%] rounded-full bg-[var(--citi-yellow)]/20 blur-3xl" />
-				<Image src="/images/sol 2.png" alt="Sol com faixas azuis e amarelas, símbolo de energia e inovação" width={1280} height={1280} priority className="absolute left-[12%] top-[12%] h-[66%] w-[66%] max-w-none object-contain md:left-[18%] md:top-[15%] md:h-[60%] md:w-[60%]" />
-			</div>
-			<div className="hero-surface absolute inset-y-0 right-[-4%] hidden w-[42%] lg:block" aria-hidden="true">
-				<div className="hero-sun">
-					<span className="hero-ray hero-ray--1" />
-					<span className="hero-ray hero-ray--2" />
-					<span className="hero-ray hero-ray--3" />
-					<span className="hero-ray hero-ray--4" />
-					<span className="hero-ray hero-ray--5" />
-					<span className="hero-ray hero-ray--6" />
-				</div>
-				<div className="hero-orbit hero-orbit--one" />
-				<div className="hero-orbit hero-orbit--two" />
-				<div className="hero-badge hero-badge--book">
-					<span>📘</span>
-				</div>
-				<div className="hero-badge hero-badge--robot">
-					<span>🤖</span>
-				</div>
-				<div className="hero-stage">
-					<div className="hero-monitor">
-						<div className="hero-screen">
-							<div className="hero-chart hero-chart--1" />
-							<div className="hero-chart hero-chart--2" />
-							<div className="hero-chart hero-chart--3" />
-						</div>
-					</div>
-					<div className="hero-person">
-						<div className="hero-person-head" />
-						<div className="hero-person-body" />
-						<div className="hero-person-arm hero-person-arm--left" />
-						<div className="hero-person-arm hero-person-arm--right" />
-					</div>
-				</div>
-			</div>
-			<div className="relative mx-auto flex min-h-[calc(100svh-76px)] max-w-[1280px] items-center justify-center px-5 pb-44 pt-12 sm:px-8 sm:pb-40 sm:pt-14 md:min-h-[calc(100vh-76px)] md:px-10 md:py-10 lg:px-12">
-				<div className="relative z-10 w-full max-w-[680px] text-left md:w-[62%] md:pr-4">
+			<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_42%,rgba(255,184,0,0.28),transparent_36%)]" />
+			<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_88%,rgba(56,189,248,0.14),transparent_28%)]" />
+
+			<div className="relative mx-auto flex min-h-[calc(100svh-76px)] max-w-[1280px] flex-col items-center px-5 pb-10 pt-12 sm:px-8 sm:pb-12 sm:pt-14 md:min-h-[calc(100vh-76px)] md:flex-row md:items-center md:gap-6 md:px-10 md:py-10 lg:gap-8 lg:px-12">
+				<div className="relative z-10 w-full max-w-[680px] text-left md:w-[52%] md:shrink-0 md:pr-2 lg:w-[48%]">
 					{/* Identidade e proposta principal do portal. */}
 					<p className="mb-3 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--citi-yellow-soft)] sm:text-xs">Ciência, Tecnologia e Inovação</p>
-					<h1 className="max-w-full font-[family-name:var(--font-joan)] text-[clamp(2.5rem,6vw,6.4rem)] leading-[0.9] tracking-[-0.04em] md:text-[clamp(2.8rem,6vw,6.8rem)]">
+					<h1 className="max-w-full font-[family-name:var(--font-joan)] text-[clamp(2.5rem,6vw,6.4rem)] leading-[0.9] tracking-[-0.04em] md:text-[clamp(2.8rem,5.4vw,6.2rem)]">
 						Portal <span className="text-[var(--citi-yellow)]">CiTI-DE</span>
 					</h1>
-					<p className="mt-5 max-w-[34rem] text-lg leading-tight text-white sm:text-2xl lg:text-[2rem]">Serviços e oportunidades para impulsionar Patos.</p>
+					<p className="mt-5 max-w-[34rem] text-lg leading-tight text-white sm:text-2xl lg:text-[1.85rem]">Serviços e oportunidades para impulsionar Patos.</p>
 					<p className="mt-4 max-w-[32rem] text-sm leading-6 text-white/80 sm:text-base lg:text-lg">Acesse cursos, programas, emprego e apoio para empresas e cidadãos.</p>
 
 					{/* Busca global focada em uma ação principal: encontrar um serviço. */}
@@ -79,12 +43,18 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 					</div>
 				</div>
 
-				{/* Personagens são decorativos e não participam da navegação. */}
-				<div className="pointer-events-none absolute bottom-1 left-3 z-0 w-10 sm:bottom-3 sm:left-5 sm:w-14 md:bottom-5 md:left-10 md:w-16">
-					<Image src="/images/pato.png" alt="" width={256} height={256} className="h-auto w-full object-contain" />
-				</div>
-				<div className="pointer-events-none absolute bottom-1 right-3 z-0 w-10 sm:bottom-3 sm:right-5 sm:w-14 md:bottom-5 md:right-10 md:w-16">
-					<Image src="/images/robou_dando_chau.webp" alt="Robô acenando" width={256} height={256} className="h-auto w-full object-contain" />
+				{/* Ilustração principal do portal: jovem, pato, robô e sol de inovação. */}
+				<div className="pointer-events-none relative z-0 mt-8 flex w-full max-w-[640px] flex-1 items-end justify-center md:mt-0 md:max-w-none md:justify-end lg:self-stretch">
+					<div className="absolute bottom-[12%] right-[8%] hidden h-[42%] w-[58%] rounded-full bg-[var(--citi-yellow)]/18 blur-3xl md:block" aria-hidden="true" />
+					<Image
+						src="/images/sobre-pessoa-inovacao-transparent.png"
+						alt="Jovem em um computador com um pato de fones, um robô e o sol da inovação"
+						width={2176}
+						height={1632}
+						priority
+						sizes="(max-width: 768px) 92vw, (max-width: 1280px) 48vw, 620px"
+						className="relative h-auto w-full max-w-[560px] object-contain drop-shadow-[0_28px_48px_rgba(2,24,48,0.35)] sm:max-w-[600px] md:max-w-[560px] lg:max-w-[640px] xl:max-w-[680px]"
+					/>
 				</div>
 			</div>
 		</section>
