@@ -13,10 +13,10 @@ import { StatsSection } from "@/components/sections/StatsSection";
 export function PortalSections() {
 	return (
 		<div className="portal-content-surface">
+			<HighlightsStripSection />
 			<AboutSection />
 			<AudienceSection />
 			<QuickAccessSection />
-			<HighlightsStripSection />
 			<NewsSection />
 			<ServicesSection />
 			<ProgramsSection />

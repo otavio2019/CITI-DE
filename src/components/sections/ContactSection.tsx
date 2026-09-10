@@ -1,4 +1,4 @@
-import { FiArrowUpRight, FiClock, FiMail, FiMapPin } from "react-icons/fi";
+import { FiArrowUpRight, FiClock, FiGlobe, FiInstagram, FiMail, FiMapPin } from "react-icons/fi";
 import { ActionButton } from "@/components/ui/ActionButton";
 
 export function ContactSection() {
@@ -17,6 +17,8 @@ export function ContactSection() {
 					</div>
 					<div className="grid gap-4 text-sm text-white/75 sm:grid-cols-2 lg:grid-cols-1">
 						<div className="flex gap-3"><FiMail className="mt-1 shrink-0 text-[var(--citi-yellow-soft)]" aria-hidden="true" /><div><p className="font-bold text-white">E-mail</p><a href="mailto:citi-de@patos.pb.gov.br" className="hover:text-[var(--citi-yellow)]">citi-de@patos.pb.gov.br</a></div></div>
+						<div className="flex gap-3"><FiInstagram className="mt-1 shrink-0 text-[var(--citi-yellow-soft)]" aria-hidden="true" /><div><p className="font-bold text-white">Instagram</p><a href="https://www.instagram.com/citide_patos?stkn=MTNwZnI3bGlrajc1cg==" target="_blank" rel="noreferrer" className="hover:text-[var(--citi-yellow)]">@citide_patos <FiArrowUpRight className="inline" aria-hidden="true" /></a></div></div>
+						<div className="flex gap-3"><FiGlobe className="mt-1 shrink-0 text-[var(--citi-yellow-soft)]" aria-hidden="true" /><div><p className="font-bold text-white">Prefeitura</p><a href="https://www.instagram.com/pmpatos/" target="_blank" rel="noreferrer" className="hover:text-[var(--citi-yellow)]">@pmpatos <FiArrowUpRight className="inline" aria-hidden="true" /></a></div></div>
 						<div className="flex gap-3"><FiClock className="mt-1 shrink-0 text-[var(--citi-yellow-soft)]" aria-hidden="true" /><div><p className="font-bold text-white">Horário</p><p>08:00 às 14:00</p><p className="mt-1 text-xs text-white/55">Prazo médio de resposta: até 3 dias úteis.</p></div></div>
 						<div className="flex gap-3 sm:col-span-2 lg:col-span-1"><FiMapPin className="mt-1 shrink-0 text-[var(--citi-yellow-soft)]" aria-hidden="true" /><div><p className="font-bold text-white">Endereço</p><a href="https://maps.app.goo.gl/ibpgjG25uxvzyBYL7" className="hover:text-[var(--citi-yellow)]">Avenida Vidal de Negreiros, 84 - Centro, Patos - PB <FiArrowUpRight className="inline" aria-hidden="true" /></a></div></div>
 					</div>

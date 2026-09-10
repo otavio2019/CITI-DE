@@ -45,10 +45,16 @@ body {
 }
 
 .ticker-track {
-  animation: ticker-scroll 28s linear infinite;
+  animation: ticker-scroll 40s linear infinite;
   display: flex;
   gap: 1rem;
   width: max-content;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
 }
 
 @keyframes ticker-scroll {
