@@ -30,12 +30,31 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--citi-background);
   color: var(--citi-text);
-  font-family: var(--font-joan), serif;
+  font-family: var(--font-geist-sans), sans-serif;
   margin: 0;
   overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-display {
+  font-family: var(--font-joan), serif;
+}
+
+::selection {
+  background: rgba(255, 184, 0, 0.35);
+  color: var(--citi-navy);
 }
 
 .about-scene {

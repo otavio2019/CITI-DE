@@ -56,11 +56,11 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 				<div className="relative z-10 w-full max-w-[680px] text-left md:w-[62%] md:pr-4">
 					{/* Identidade e proposta principal do portal. */}
 					<p className="mb-3 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--citi-yellow-soft)] sm:text-xs">Ciência, Tecnologia e Inovação</p>
-					<h1 className="max-w-full whitespace-nowrap font-[family-name:var(--font-joan)] text-[clamp(2.5rem,7vw,7rem)] leading-[0.9] tracking-[-0.04em] md:text-[clamp(2.75rem,7vw,7rem)]">
+					<h1 className="max-w-full font-[family-name:var(--font-joan)] text-[clamp(2.5rem,6vw,6.4rem)] leading-[0.9] tracking-[-0.04em] md:text-[clamp(2.8rem,6vw,6.8rem)]">
 						Portal <span className="text-[var(--citi-yellow)]">CiTI-DE</span>
 					</h1>
-					<p className="mt-5 max-w-[38rem] text-lg leading-tight text-white sm:text-2xl lg:text-[2rem]">O que você precisa? Encontre serviços, programas e informações para impulsionar o desenvolvimento de Patos.</p>
-					<p className="mt-4 max-w-[38rem] text-sm leading-6 text-white/80 sm:text-base lg:text-lg">Acesse cursos, empregos, programas de inovação e incentivos para empresas.</p>
+					<p className="mt-5 max-w-[38rem] text-lg leading-tight text-white sm:text-2xl lg:text-[2rem]">Encontre serviços, programas e oportunidades para impulsionar o desenvolvimento de Patos.</p>
+					<p className="mt-4 max-w-[38rem] text-sm leading-6 text-white/80 sm:text-base lg:text-lg">Cursos, empregos, apoio a empresas e iniciativas de inovação em um só lugar.</p>
 					{/* Ações prioritárias aparecem antes da busca para orientar o visitante. */}
 					<div className="mt-6 flex flex-wrap gap-2.5 sm:mt-7 sm:gap-3">
 						<a href="#acesso-rapido" className="inline-flex items-center justify-center rounded-full bg-[var(--citi-yellow)] px-4 py-2.5 text-xs font-bold text-[var(--citi-navy)] hover:bg-[var(--citi-yellow-soft)] sm:px-5 sm:py-3 sm:text-sm">Encontrar um serviço</a>

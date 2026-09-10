@@ -2,6 +2,8 @@
 
 export const navigationLinks = [
 	{ label: "Sobre", href: "#sobre" },
+	{ label: "Serviços", href: "#servicos" },
+	{ label: "Programas", href: "#programas" },
 ];
 
 export const serviceLinks = [
@@ -19,7 +21,7 @@ export const programLinks = [
 	{ label: "AceleraPatos", href: "https://citide.patos.pb.gov.br/cartilha#acelerapatos" },
 	{ label: "ProInova", href: "https://citide.patos.pb.gov.br/cartilha#proinova" },
 	{ label: "Selo Patos Inovação", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
-	{ label: "Patos + Empregos", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
+	{ label: "Patos + Empregos", href: "https://citide.patos.pb.gov.br/cartilha" },
 	{ label: "PICTI", href: "https://citide.patos.pb.gov.br/cartilha#picti" },
 ];
 
@@ -27,7 +29,7 @@ export const heroCategories = [
 	{ label: "Curso SENAC", href: "https://cursos.citide.patos.pb.gov.br/" },
 	{ label: "AceleraPatos", href: "https://citide.patos.pb.gov.br/cartilha#acelerapatos" },
 	{ label: "ProInova", href: "https://citide.patos.pb.gov.br/cartilha#proinova" },
-	{ label: "Patos + Empregos", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
+	{ label: "Patos + Empregos", href: "https://citide.patos.pb.gov.br/cartilha" },
 	{ label: "Selo Patos Inovação", href: "https://citide.patos.pb.gov.br/cartilha#reconhecimento" },
 	{ label: "Cartilha Completa", href: "https://citide.patos.pb.gov.br/cartilha" },
 ];
