@@ -16,6 +16,20 @@ export function HeroSection({ searchTerm, searchMessage, onSearch, onSearchTermC
 			<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_42%,rgba(255,184,0,0.28),transparent_36%)]" />
 			<div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_88%,rgba(56,189,248,0.14),transparent_28%)]" />
 
+			{/* Sol decorativo — só a arte, sem os bonecos de CSS. */}
+			<div className="pointer-events-none absolute right-[-6%] top-[-4%] -z-10 h-[42%] w-[70%] overflow-hidden sm:right-[-2%] sm:top-0 sm:h-[48%] sm:w-[48%] md:right-[-1%] md:top-[2%] md:h-[58%] md:w-[40%] lg:w-[36%]">
+				<div className="absolute right-[18%] top-[16%] h-[42%] w-[48%] rounded-full bg-[var(--citi-yellow)]/25 blur-3xl" aria-hidden="true" />
+				<Image
+					src="/images/sol 2.png"
+					alt=""
+					width={1280}
+					height={1280}
+					priority
+					aria-hidden="true"
+					className="absolute left-[8%] top-[4%] h-[88%] w-[88%] max-w-none object-contain drop-shadow-[0_18px_40px_rgba(255,184,0,0.22)] md:left-[12%] md:top-[8%] md:h-[82%] md:w-[82%]"
+				/>
+			</div>
+
 			<div className="relative mx-auto flex min-h-[calc(100svh-76px)] max-w-[1280px] flex-col items-center px-5 pb-10 pt-12 sm:px-8 sm:pb-12 sm:pt-14 md:min-h-[calc(100vh-76px)] md:flex-row md:items-center md:gap-6 md:px-10 md:py-10 lg:gap-8 lg:px-12">
 				<div className="relative z-10 w-full max-w-[680px] text-left md:w-[52%] md:shrink-0 md:pr-2 lg:w-[48%]">
 					{/* Identidade e proposta principal do portal. */}

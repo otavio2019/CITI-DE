@@ -14,28 +14,6 @@ export function AboutSection() {
 					<div className="mt-8 grid gap-3 sm:grid-cols-2">{institutionalBodies.map((body) => <article key={body.title} className="border-l-4 border-[var(--citi-yellow)] bg-white/10 px-4 py-3 shadow-sm"><h3 className="text-base font-bold text-white">{body.title}</h3><p className="mt-1 text-sm leading-6 text-white/70">{body.text}</p><a href="#contato" className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-[var(--citi-yellow)] hover:text-[var(--citi-yellow-soft)]">Falar com a secretaria <FiArrowUpRight aria-hidden="true" /></a></article>)}</div>
 				</div>
 				<div className="relative overflow-hidden rounded-3xl border border-white/15 bg-[radial-gradient(circle_at_60%_35%,rgba(255,184,0,0.24),transparent_38%)] shadow-2xl">
-					<div className="about-scene" aria-hidden="true">
-						<div className="about-sun">
-							<span className="about-sun-core" />
-						</div>
-						<div className="about-orbit about-orbit--one" />
-						<div className="about-orbit about-orbit--two" />
-						<div className="about-badge about-badge--book">📘</div>
-						<div className="about-badge about-badge--bot">🤖</div>
-						<div className="about-pc">
-							<div className="about-screen">
-								<div className="about-graph about-graph--one" />
-								<div className="about-graph about-graph--two" />
-								<div className="about-graph about-graph--three" />
-							</div>
-						</div>
-						<div className="about-person">
-							<div className="about-head" />
-							<div className="about-body" />
-							<div className="about-arm about-arm--left" />
-							<div className="about-arm about-arm--right" />
-						</div>
-					</div>
 					<Image src="/images/patos-pixel/praca-getulio-vargas.png" alt="Praça Getúlio Vargas em Patos ao pôr do sol, ilustrada em pixel art" width={2176} height={1632} className="relative h-auto w-full object-cover opacity-90" />
 					<div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[var(--citi-navy)] via-[var(--citi-navy)]/80 to-transparent px-5 pb-5 pt-16">
 						<p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--citi-yellow-soft)]">Patos, Paraíba</p>
