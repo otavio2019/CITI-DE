@@ -154,7 +154,7 @@ export default function Header() {
 						alt="Logo CiTI-DE"
 						width={52}
 						height={52}
-						className="h-12 w-12 rounded-full object-contain md:h-14 md:w-14"
+						className="h-12 w-12 object-contain md:h-14 md:w-14"
 					/>
 					<span className="flex items-center gap-1 text-[1.8rem] font-bold tracking-tight md:text-[2.2rem]">
 						<span className="font-[family-name:var(--font-joan)] text-white">CiTI</span>
