@@ -33,8 +33,7 @@ A aplicação utiliza o **App Router do Next.js**, componentes React com TypeScr
 | [React 19](https://react.dev/) | Construção da interface por meio de componentes. |
 | [TypeScript](https://www.typescriptlang.org/) | Tipagem estática do código. |
 | [Tailwind CSS 4](https://tailwindcss.com/) | Estilização da interface com classes utilitárias. |
-| [Lucide React](https://lucide.dev/) | Biblioteca principal de ícones. |
-| [React Icons](https://react-icons.github.io/react-icons/) | Biblioteca complementar de ícones. |
+| [React Icons](https://react-icons.github.io/react-icons/) | Biblioteca de ícones utilizada nos componentes. |
 | [ESLint](https://eslint.org/) | Verificação da qualidade e padronização do código. |
 
 ## Requisitos
